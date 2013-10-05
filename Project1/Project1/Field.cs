@@ -10,16 +10,19 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
+
 namespace Project1
 {
-    class Bee
+    class Field
     {
         private Project1 game;   // the game
-        private Model beeModel; // bees model
+        private Model fieldModel; // fields model
+        private Bat bat;
 
-        public Bee(Project1 game)
+        public Field(Project1 game, Bat bat)
         {
             this.game = game;
+            this.bat = bat;
         }
 
         /// <summary>
@@ -28,7 +31,7 @@ namespace Project1
         /// </summary>
         public void LoadContent(ContentManager content)
         {
-            beeModel = content.Load<Model>("Bee");
+            fieldModel = content.Load<Model>("GrassField2");
         }
 
 
@@ -52,7 +55,7 @@ namespace Project1
         {
 
             // TODO: Add your drawing code here
-            DrawModel(graphics, beeModel, Matrix.Identity);
+            DrawModel(graphics, fieldModel, Matrix.Identity);
         }
 
 
@@ -67,9 +70,9 @@ namespace Project1
                 {
                     effect.EnableDefaultLighting();
                     effect.World = transforms[mesh.ParentBone.Index] * world;
-                    effect.View = Matrix.CreateLookAt(new Vector3(30, 30, 30),
+                    effect.View = Matrix.CreateLookAt(new Vector3(0, 600, 0),
                                                       new Vector3(0, 0, 0),
-                                                      new Vector3(0, 1, 0));
+                                                      new Vector3(1, 0, 0));
                     effect.Projection = Matrix.CreatePerspectiveFieldOfView(MathHelper.ToRadians(35),
                         graphics.GraphicsDevice.Viewport.AspectRatio, 10, 10000);
                 }

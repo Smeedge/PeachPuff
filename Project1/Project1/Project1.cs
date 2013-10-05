@@ -19,6 +19,7 @@ namespace Project1
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         private Bat bat;
+        private Field field;
 
         // our game screens
         Project1GameScreen project1Screen = null;
@@ -52,6 +53,7 @@ namespace Project1
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             bat = new Bat(this);
+            field = new Field(this, bat);
             project1Screen = new Project1GameScreen(this);
             splashScreen = new SplashGameScreen(this);
 
@@ -80,6 +82,7 @@ namespace Project1
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
             bat.LoadContent(Content);
+            field.LoadContent(Content);
             project1Screen.LoadContent();
             splashScreen.LoadContent();
 
@@ -119,7 +122,8 @@ namespace Project1
             GraphicsDevice.Clear(Color.PeachPuff);
 
             screen.Draw(gameTime);
-            bat.Draw(graphics, gameTime);
+            //bat.Draw(graphics, gameTime);
+            field.Draw(graphics, gameTime);
             screen.DrawSprites(gameTime, spriteBatch);
             base.Draw(gameTime);
         }
