@@ -18,6 +18,12 @@ namespace Project1
         private Model beeModel; // bees model
         private Bat bat;
 
+        public float currentSpeed = 0;
+        public float damping = 0;
+        public Vector3 direction;
+        public Vector3 location;
+        Matrix locMatrix;
+
         public Bee(Project1 game, Bat bat)
         {
             this.game = game;
@@ -41,7 +47,11 @@ namespace Project1
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         public void Update(GameTime gameTime)
         {
-
+            direction = bat.Location - location;
+            direction.Normalize();
+            location += direction * currentSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+            double angle = Math.Atan2(direction.Y, direction.X);
+            locMatrix = Matrix.CreateTranslation(location); // * rotation code
             // TODO: Add your update logic here
 
         }
@@ -54,7 +64,7 @@ namespace Project1
         {
 
             // TODO: Add your drawing code here
-            DrawModel(graphics, beeModel, Matrix.Identity);
+            DrawModel(graphics, beeModel, locMatrix);
         }
 
 

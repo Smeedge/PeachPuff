@@ -54,7 +54,7 @@ namespace Project1
         public void Draw(GraphicsDeviceManager graphics, GameTime gameTime)
         {
 
-            // TODO: Add your drawing code here
+            // TODO: scale field by a factor of 10
             DrawModel(graphics, fieldModel, Matrix.Identity);
         }
 

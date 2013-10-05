@@ -8,3 +8,20 @@ H:\CSE 473\Project1\Project1\Project1\Project1\obj\x86\Debug\ResolveAssemblyRefe
 H:\CSE 473\Project1\Project1\Project1\Project1\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 H:\CSE 473\Project1\Project1\Project1\Project1\obj\x86\Debug\Project1.exe
 H:\CSE 473\Project1\Project1\Project1\Project1\obj\x86\Debug\Project1.pdb
+H:\473\Project\Project1\Project1\bin\x86\Debug\Content\Bat-rigid.xnb
+H:\473\Project\Project1\Project1\bin\x86\Debug\Content\Sky.xnb
+H:\473\Project\Project1\Project1\bin\x86\Debug\Content\FBX\172C1430\Bat-rigid.fbm\BAT_2_0.xnb
+H:\473\Project\Project1\Project1\bin\x86\Debug\Content\FBX\A47E1214\Sky.fbm\sky_0.xnb
+H:\473\Project\Project1\Project1\bin\x86\Debug\Project1.exe
+H:\473\Project\Project1\Project1\bin\x86\Debug\Project1.pdb
+H:\473\Project\Project1\Project1\obj\x86\Debug\ResolveAssemblyReference.cache
+H:\473\Project\Project1\Project1\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+H:\473\Project\Project1\Project1\obj\x86\Debug\Project1.exe
+H:\473\Project\Project1\Project1\obj\x86\Debug\Project1.pdb
+H:\473\Project\Project1\Project1\bin\x86\Debug\Content\Bee.xnb
+H:\473\Project\Project1\Project1\bin\x86\Debug\Content\GrassField2.xnb
+H:\473\Project\Project1\Project1\bin\x86\Debug\Content\FBX\A37F11E9\Bee.fbm\gb3_0.xnb
+H:\473\Project\Project1\Project1\bin\x86\Debug\Content\FBX\A37F11E9\Bee.fbm\gb1_0.xnb
+H:\473\Project\Project1\Project1\bin\x86\Debug\Content\FBX\A37F11E9\Bee.fbm\gb2_0.xnb
+H:\473\Project\Project1\Project1\bin\x86\Debug\Content\FBX\A37F11E9\Bee.fbm\gb4_0.xnb
+H:\473\Project\Project1\Project1\bin\x86\Debug\Content\FBX\43A31513\GrassField2.fbm\grass2_0.xnb

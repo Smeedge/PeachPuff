@@ -7,13 +7,13 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>H:\CSE 473\Project1\Project1\Project1\Project1\bin\x86\Debug\Content\Bat-rigid.xnb</Output>
-      <Time>2009-09-30T18:56:07.747-04:00</Time>
+      <Output>H:\473\Project\Project1\Project1\bin\x86\Debug\Content\Bat-rigid.xnb</Output>
+      <Time>2009-09-30T18:56:08-04:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Bat-rigid_0.xml</Key>
-        <Value>2013-10-04T19:55:36.244776-04:00</Value>
+        <Value>2013-10-05T15:59:52.096599-04:00</Value>
       </Dependency>
-      <Request>H:\CSE 473\Project1\Project1\Project1\Project1\bin\x86\Debug\Content\FBX\46931940\Bat-rigid.fbm\BAT_2_0.xnb</Request>
+      <Request>H:\473\Project\Project1\Project1\bin\x86\Debug\Content\FBX\172C1430\Bat-rigid.fbm\BAT_2_0.xnb</Request>
     </Item>
     <Item>
       <Source>Sky.FBX</Source>
@@ -21,23 +21,23 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>H:\CSE 473\Project1\Project1\Project1\Project1\bin\x86\Debug\Content\Sky.xnb</Output>
-      <Time>2009-10-06T22:43:10.23-04:00</Time>
+      <Output>H:\473\Project\Project1\Project1\bin\x86\Debug\Content\Sky.xnb</Output>
+      <Time>2009-10-06T22:43:12-04:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Sky_0.xml</Key>
-        <Value>2013-10-04T19:55:36.571758-04:00</Value>
+        <Value>2013-10-05T15:59:52.574574-04:00</Value>
       </Dependency>
-      <Request>H:\CSE 473\Project1\Project1\Project1\Project1\bin\x86\Debug\Content\FBX\B5851724\Sky.fbm\sky_0.xnb</Request>
+      <Request>H:\473\Project\Project1\Project1\bin\x86\Debug\Content\FBX\A47E1214\Sky.fbm\sky_0.xnb</Request>
     </Item>
     <Item>
       <Source>Bat-rigid.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Bat-rigid_0.xml</Output>
-      <Time>2009-09-30T18:56:07.747-04:00</Time>
+      <Time>2009-09-30T18:56:08-04:00</Time>
     </Item>
     <Item>
-      <Source>obj\x86\Debug\FBX\46931940\Bat-rigid.fbm\BAT_2.JPG</Source>
+      <Source>obj\x86\Debug\FBX\172C1430\Bat-rigid.fbm\BAT_2.JPG</Source>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Parameters>
@@ -49,18 +49,18 @@
         <Data Key="PremultiplyAlpha" Type="bool">true</Data>
       </Parameters>
       <Options>None</Options>
-      <Output>H:\CSE 473\Project1\Project1\Project1\Project1\bin\x86\Debug\Content\FBX\46931940\Bat-rigid.fbm\BAT_2_0.xnb</Output>
-      <Time>2013-10-04T19:55:36.036792-04:00</Time>
+      <Output>H:\473\Project\Project1\Project1\bin\x86\Debug\Content\FBX\172C1430\Bat-rigid.fbm\BAT_2_0.xnb</Output>
+      <Time>2013-10-05T15:59:51.809619-04:00</Time>
     </Item>
     <Item>
       <Source>Sky.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Sky_0.xml</Output>
-      <Time>2009-10-06T22:43:10.23-04:00</Time>
+      <Time>2009-10-06T22:43:12-04:00</Time>
     </Item>
     <Item>
-      <Source>obj\x86\Debug\FBX\B5851724\Sky.fbm\sky.jpg</Source>
+      <Source>obj\x86\Debug\FBX\A47E1214\Sky.fbm\sky.jpg</Source>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Parameters>
@@ -72,8 +72,133 @@
         <Data Key="PremultiplyAlpha" Type="bool">true</Data>
       </Parameters>
       <Options>None</Options>
-      <Output>H:\CSE 473\Project1\Project1\Project1\Project1\bin\x86\Debug\Content\FBX\B5851724\Sky.fbm\sky_0.xnb</Output>
-      <Time>2013-10-04T19:55:36.556759-04:00</Time>
+      <Output>H:\473\Project\Project1\Project1\bin\x86\Debug\Content\FBX\A47E1214\Sky.fbm\sky_0.xnb</Output>
+      <Time>2013-10-05T15:59:52.559575-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Bee.FBX</Source>
+      <Name>Bee</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>H:\473\Project\Project1\Project1\bin\x86\Debug\Content\Bee.xnb</Output>
+      <Time>2009-09-30T20:00:32.717-04:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Bee_0.xml</Key>
+        <Value>2013-10-05T16:45:26.45824-04:00</Value>
+      </Dependency>
+      <Request>H:\473\Project\Project1\Project1\bin\x86\Debug\Content\FBX\A37F11E9\Bee.fbm\gb3_0.xnb</Request>
+      <Request>H:\473\Project\Project1\Project1\bin\x86\Debug\Content\FBX\A37F11E9\Bee.fbm\gb1_0.xnb</Request>
+      <Request>H:\473\Project\Project1\Project1\bin\x86\Debug\Content\FBX\A37F11E9\Bee.fbm\gb2_0.xnb</Request>
+      <Request>H:\473\Project\Project1\Project1\bin\x86\Debug\Content\FBX\A37F11E9\Bee.fbm\gb4_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>GrassField2.FBX</Source>
+      <Name>GrassField2</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>H:\473\Project\Project1\Project1\bin\x86\Debug\Content\GrassField2.xnb</Output>
+      <Time>2009-10-06T20:51:07.914-04:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\GrassField2_0.xml</Key>
+        <Value>2013-10-05T16:45:27.221198-04:00</Value>
+      </Dependency>
+      <Request>H:\473\Project\Project1\Project1\bin\x86\Debug\Content\FBX\43A31513\GrassField2.fbm\grass2_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>Bee.FBX</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Bee_0.xml</Output>
+      <Time>2009-09-30T20:00:32.717-04:00</Time>
+    </Item>
+    <Item>
+      <Source>obj\x86\Debug\FBX\A37F11E9\Bee.fbm\gb3.jpg</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>H:\473\Project\Project1\Project1\bin\x86\Debug\Content\FBX\A37F11E9\Bee.fbm\gb3_0.xnb</Output>
+      <Time>2013-10-05T16:45:22.118467-04:00</Time>
+    </Item>
+    <Item>
+      <Source>obj\x86\Debug\FBX\A37F11E9\Bee.fbm\gb1.jpg</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>H:\473\Project\Project1\Project1\bin\x86\Debug\Content\FBX\A37F11E9\Bee.fbm\gb1_0.xnb</Output>
+      <Time>2013-10-05T16:45:22.122467-04:00</Time>
+    </Item>
+    <Item>
+      <Source>obj\x86\Debug\FBX\A37F11E9\Bee.fbm\gb2.jpg</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>H:\473\Project\Project1\Project1\bin\x86\Debug\Content\FBX\A37F11E9\Bee.fbm\gb2_0.xnb</Output>
+      <Time>2013-10-05T16:45:22.126472-04:00</Time>
+    </Item>
+    <Item>
+      <Source>obj\x86\Debug\FBX\A37F11E9\Bee.fbm\gb4.jpg</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>H:\473\Project\Project1\Project1\bin\x86\Debug\Content\FBX\A37F11E9\Bee.fbm\gb4_0.xnb</Output>
+      <Time>2013-10-05T16:45:22.134476-04:00</Time>
+    </Item>
+    <Item>
+      <Source>GrassField2.FBX</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\GrassField2_0.xml</Output>
+      <Time>2009-10-06T20:51:07.914-04:00</Time>
+    </Item>
+    <Item>
+      <Source>obj\x86\Debug\FBX\43A31513\GrassField2.fbm\grass2.jpg</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>H:\473\Project\Project1\Project1\bin\x86\Debug\Content\FBX\43A31513\GrassField2.fbm\grass2_0.xnb</Output>
+      <Time>2013-10-05T16:45:27.199199-04:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -81,10 +206,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>H:\CSE 473\Project1\Project1\Project1\Project1Content\</RootDirectory>
-      <LoggerRootDirectory>H:\CSE 473\Project1\Project1\Project1\Project1\</LoggerRootDirectory>
-      <IntermediateDirectory>H:\CSE 473\Project1\Project1\Project1\Project1Content\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>H:\CSE 473\Project1\Project1\Project1\Project1\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>H:\473\Project\Project1\Project1Content\</RootDirectory>
+      <LoggerRootDirectory>H:\473\Project\Project1\Project1\</LoggerRootDirectory>
+      <IntermediateDirectory>H:\473\Project\Project1\Project1Content\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>H:\473\Project\Project1\Project1\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -113,7 +238,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2011-08-12T03:42:51.7128906-04:00</Value>
+        <Value>2011-08-11T11:49:03.5498046-04:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>
