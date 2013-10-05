@@ -19,6 +19,7 @@ namespace Project1
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         private Bat bat;
+        private Bee bee;
         private Field field;
 
         // our game screens
@@ -53,6 +54,7 @@ namespace Project1
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             bat = new Bat(this);
+            bee = new Bee(this, bat);
             field = new Field(this, bat);
             project1Screen = new Project1GameScreen(this);
             splashScreen = new SplashGameScreen(this);

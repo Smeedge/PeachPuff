@@ -16,10 +16,12 @@ namespace Project1
     {
         private Project1 game;   // the game
         private Model beeModel; // bees model
+        private Bat bat;
 
-        public Bee(Project1 game)
+        public Bee(Project1 game, Bat bat)
         {
             this.game = game;
+            this.bat = bat;
         }
 
         /// <summary>
