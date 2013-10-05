@@ -1,0 +1,10 @@
+H:\CSE 473\Project1\Project1\Project1\Project1\bin\x86\Debug\Content\Bat-rigid.xnb
+H:\CSE 473\Project1\Project1\Project1\Project1\bin\x86\Debug\Content\Sky.xnb
+H:\CSE 473\Project1\Project1\Project1\Project1\bin\x86\Debug\Content\FBX\46931940\Bat-rigid.fbm\BAT_2_0.xnb
+H:\CSE 473\Project1\Project1\Project1\Project1\bin\x86\Debug\Content\FBX\B5851724\Sky.fbm\sky_0.xnb
+H:\CSE 473\Project1\Project1\Project1\Project1\bin\x86\Debug\Project1.exe
+H:\CSE 473\Project1\Project1\Project1\Project1\bin\x86\Debug\Project1.pdb
+H:\CSE 473\Project1\Project1\Project1\Project1\obj\x86\Debug\ResolveAssemblyReference.cache
+H:\CSE 473\Project1\Project1\Project1\Project1\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+H:\CSE 473\Project1\Project1\Project1\Project1\obj\x86\Debug\Project1.exe
+H:\CSE 473\Project1\Project1\Project1\Project1\obj\x86\Debug\Project1.pdb
