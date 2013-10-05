@@ -84,6 +84,7 @@ namespace Project1
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
             bat.LoadContent(Content);
+            bee.LoadContent(Content);
             field.LoadContent(Content);
             project1Screen.LoadContent();
             splashScreen.LoadContent();
@@ -110,7 +111,7 @@ namespace Project1
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
-
+            bee.Update(gameTime);
             screen.Update(gameTime);
             base.Update(gameTime);
         }
@@ -125,6 +126,7 @@ namespace Project1
 
             screen.Draw(gameTime);
             //bat.Draw(graphics, gameTime);
+            bee.Draw(graphics, gameTime);
             field.Draw(graphics, gameTime);
             screen.DrawSprites(gameTime, spriteBatch);
             base.Draw(gameTime);
