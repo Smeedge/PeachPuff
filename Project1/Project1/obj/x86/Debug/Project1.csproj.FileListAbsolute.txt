@@ -8,3 +8,18 @@ H:\CSE 473\Project1\Project1\Project1\Project1\obj\x86\Debug\ResolveAssemblyRefe
 H:\CSE 473\Project1\Project1\Project1\Project1\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 H:\CSE 473\Project1\Project1\Project1\Project1\obj\x86\Debug\Project1.exe
 H:\CSE 473\Project1\Project1\Project1\Project1\obj\x86\Debug\Project1.pdb
+C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\Bat-rigid.xnb
+C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\Sky.xnb
+C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\FBX\FCCE1F92\Bat-rigid.fbm\BAT_2_0.xnb
+C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\FBX\45E31D76\Sky.fbm\sky_0.xnb
+C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Project1.exe
+C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Project1.pdb
+C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\obj\x86\Debug\Project1.csprojResolveAssemblyReference.cache
+C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\obj\x86\Debug\Project1.exe
+C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\obj\x86\Debug\Project1.pdb
+C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\Butterfly.xnb
+C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\FBX\DA2000\Butterfly.fbm\BUTTFACE_0.xnb
+C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\FBX\DA2000\Butterfly.fbm\BUTTWIFR_0.xnb
+C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\FBX\DA2000\Butterfly.fbm\BUTTWIBA_0.xnb
+C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\FBX\DA2000\Butterfly.fbm\BUTTBODY_0.xnb

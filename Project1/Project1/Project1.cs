@@ -19,6 +19,8 @@ namespace Project1
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         private Bat bat;
+        private ButterflyField butterflyField;
+        
 
         // our game screens
         Project1GameScreen project1Screen = null;
@@ -54,6 +56,7 @@ namespace Project1
             bat = new Bat(this);
             project1Screen = new Project1GameScreen(this);
             splashScreen = new SplashGameScreen(this);
+            butterflyField = new ButterflyField(this);
 
             screen = splashScreen;
         }
@@ -80,6 +83,7 @@ namespace Project1
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
             bat.LoadContent(Content);
+            butterflyField.LoadContent(Content);
             project1Screen.LoadContent();
             splashScreen.LoadContent();
 
@@ -107,6 +111,7 @@ namespace Project1
                 this.Exit();
 
             screen.Update(gameTime);
+            butterflyField.Update(gameTime);
             base.Update(gameTime);
         }
 
@@ -117,10 +122,11 @@ namespace Project1
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.PeachPuff);
-
             screen.Draw(gameTime);
             bat.Draw(graphics, gameTime);
+            butterflyField.Draw(graphics, gameTime);
             screen.DrawSprites(gameTime, spriteBatch);
+           
             base.Draw(gameTime);
         }
 

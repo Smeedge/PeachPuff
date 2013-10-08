@@ -15,7 +15,8 @@ namespace Project1
     class Bat
     {
         private Project1 game;   // the game
-        private Model batModel; // bats model
+        private Model batModel; // bats models
+
 
          public Bat(Project1 game)
         {
@@ -67,7 +68,7 @@ namespace Project1
                {
                    effect.EnableDefaultLighting();
                    effect.World = transforms[mesh.ParentBone.Index] * world;
-                   effect.View = Matrix.CreateLookAt(new Vector3(30, 30, 30),
+                   effect.View = Matrix.CreateLookAt(new Vector3(100, 100, 100),
                                                      new Vector3(0, 0, 0),
                                                      new Vector3(0, 1, 0));
                    effect.Projection = Matrix.CreatePerspectiveFieldOfView(MathHelper.ToRadians(35),

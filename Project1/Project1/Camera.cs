@@ -16,7 +16,7 @@ namespace Project1
         /// <summary>
         /// The eye position in space
         /// </summary>
-        private Vector3 eye = new Vector3(1000, 1000, 1000);
+        private Vector3 eye = new Vector3(300, 300, 300);
 
         /// <summary>
         /// The location we are looking at in space.
