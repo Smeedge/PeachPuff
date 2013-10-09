@@ -18,18 +18,23 @@ namespace Project1
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        private Bat bat;
 
         private KeyboardState lastKeyboardState;
 
         // our game screens
         Project1GameScreen project1Screen = null;
         SplashGameScreen splashScreen = null;
-
+        EndGameScreen endScreen = null;
         // The game screen we are playing
         GameScreen screen = null;
 
-        public enum GameScreens { Splash, Project1 };
+
+        private Camera camera;
+        public Camera Camera { get { return camera; } }
+
+        public enum GameScreens { Splash, Project1, End };
+
+        public GraphicsDeviceManager Graphics { get { return graphics; } }
 
         public void SetScreen(GameScreens newScreen)
         {
@@ -44,6 +49,10 @@ namespace Project1
                 case GameScreens.Project1:
                     screen = project1Screen;
                     break;
+
+                case GameScreens.End:
+                    screen = endScreen;
+                    break;
             }
 
             screen.Activate();
@@ -53,11 +62,12 @@ namespace Project1
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            bat = new Bat(this);
             project1Screen = new Project1GameScreen(this);
             splashScreen = new SplashGameScreen(this);
-
+            endScreen = new EndGameScreen(this);
             screen = splashScreen;
+            camera = new Camera(graphics);
+            camera.UseChaseCamera = true;
         }
 
         /// <summary>
@@ -68,10 +78,11 @@ namespace Project1
         /// </summary>
         protected override void Initialize()
         {
+            base.Initialize();
             lastKeyboardState = Keyboard.GetState();
+            camera.Initialize();
             project1Screen.Initialize();
             splashScreen.Initialize();
-            base.Initialize();
         }
 
         /// <summary>
@@ -82,10 +93,9 @@ namespace Project1
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            bat.LoadContent(Content);
             project1Screen.LoadContent();
             splashScreen.LoadContent();
-
+            endScreen.LoadContent();
             screen.Activate();
         }
 
@@ -111,21 +121,8 @@ namespace Project1
 
             KeyboardState keyBoardState = Keyboard.GetState();
 
-            if (keyBoardState.IsKeyDown(Keys.Space) && lastKeyboardState.IsKeyUp(Keys.Space))
-            {
-                bat.Thrust = 1;
-                bat.Flap = !bat.Flap;
-            }
-            else
-            {
-                bat.Thrust = 0;
-            }
-
-
-            lastKeyboardState = keyBoardState;
-
-            bat.Update(gameTime);
-            screen.Update(gameTime);
+            lastKeyboardState = keyBoardState; 
+            screen.Update(gameTime); 
             base.Update(gameTime);
         }
 
@@ -136,10 +133,10 @@ namespace Project1
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.PeachPuff);
-
             screen.Draw(gameTime);
-            bat.Draw(graphics, gameTime);
+            spriteBatch.Begin();
             screen.DrawSprites(gameTime, spriteBatch);
+            spriteBatch.End();
             base.Draw(gameTime);
         }
 

@@ -14,48 +14,36 @@ namespace Project1
 {
     public class Bat
     {
+        #region Fields
+
         private Project1 game;   // the game
         private Model batModel; // bats model
 
-        // the bones of the bats wings
-        private int leftwing1;
-        private int leftwing2;
-        private int rightwing1;
-        private int rightwing2;
-        private int head;
+        // animates the bat
+        private ModelBone leftwingBase;
+        private ModelBone rightwingBase;
+        private Matrix leftBaseBind;
+        private Matrix rightBaseBind;
+
+        private float angle = -.5f;
+        private float rate = 1f;
+        private bool angleChange = false;
+
 
         /// <summary>
-        /// Bat's wing angle when wings flap
+        /// Bool if wings are flapping
         /// </summary>
-        private float wingAngle = .2f;
-
-        Vector3 translateLeftWings;
-        Vector3 translateRightWings;
-
         private bool flap = false;
 
-        private Vector3 location;
-
-        public bool Flap { get { return flap; } set { flap = value; } }
-
-        public Vector3 Location {get {return location;}}
-
-        /********************************stuff********************/
+        /// <summary>
+        /// Bat orientation as a quaternion
+        /// </summary>
+        private Quaternion orientation = Quaternion.Identity;
 
         /// <summary>
         /// Current position
         /// </summary>
         private Vector3 position = Vector3.Zero;
-
-        /// <summary>
-        /// Compass heading (radians, 0 is Z direction)
-        /// </summary>
-        private float azimuth = 0;
-
-        /// <summary>
-        /// Climb angle (radians, 0 is level)
-        /// </summary>
-        private float elevation = 0;
 
         /// <summary>
         /// How fast we are going (cm/sec)
@@ -75,15 +63,74 @@ namespace Project1
         /// <summary>
         /// Maximum thrust (cm/sec^2)
         /// </summary>
-        private const float MaxThrust = 100;
+        private const float MaxThrust = 40;
 
         /// <summary>
-        /// The current ship thrust
+        /// The current turning rate in radians per second
+        /// Effectively the azimuth change rate
+        /// </summary>
+        private float turnRate = 0;
+
+        /// <summary>
+        /// The maximum turning rate
+        /// </summary>
+        private const float MaxTurnRate = (float)Math.PI/2;
+
+        /// <summary>
+        /// elevation rate
+        /// </summary>
+        private float pitchRate = 0;
+
+        /// <summary>
+        /// max elevation rate
+        /// </summary>
+        private const float MaxPitchRate = (float)(Math.PI / 2);
+
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        /// The current bat thrust
         /// </summary>
         public float Thrust { get { return thrust; } set { thrust = value; } }
 
+        /// <summary>
+        /// Bat flapping its wings
+        /// </summary>
+        public bool Flap { get { return flap; } set { flap = value; } }
 
-         public Bat(Project1 game)
+        /// <summary>
+        /// Current position of the bat
+        /// </summary>
+        public Vector3 Position { get { return position; } }
+
+        /// <summary>
+        /// Turning rate in radians per second
+        /// </summary>
+        public float TurnRate { get { return turnRate; } set { turnRate = value; } }
+
+        /// <summary>
+        /// Elevation rate
+        /// </summary>
+        public float PitchRate { get { return pitchRate; } set { pitchRate = value; } }
+
+
+        /// <summary>
+        /// The current bat transformation
+        /// </summary>
+        public Matrix Transform
+        {
+            get
+            {
+                return Matrix.CreateFromQuaternion(orientation) *
+                        Matrix.CreateTranslation(position);
+            }
+        }
+
+        #endregion
+
+        public Bat(Project1 game)
         {
             this.game = game;
         }
@@ -95,12 +142,10 @@ namespace Project1
          public void LoadContent(ContentManager content)
         {
              batModel = content.Load<Model>("Bat-rigid");
-             leftwing1 = batModel.Bones.IndexOf(batModel.Bones["LeftWing1"]);
-             leftwing2 = batModel.Bones.IndexOf(batModel.Bones["LeftWing2"]);
-             rightwing1 = batModel.Bones.IndexOf(batModel.Bones["RightWing1"]);
-             rightwing2 = batModel.Bones.IndexOf(batModel.Bones["RightWing2"]);
-             head = batModel.Bones.IndexOf(batModel.Bones["Head"]);
-
+             leftwingBase = batModel.Bones["LeftWing1"];
+             rightwingBase = batModel.Bones["RightWing1"];
+             leftBaseBind = leftwingBase.Transform;
+             rightBaseBind = rightwingBase.Transform;
         }
 
 
@@ -111,24 +156,38 @@ namespace Project1
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         public void Update(GameTime gameTime)
         {
-            // flaps the bats wings
-            if (flap)
-            {
-                translateLeftWings = new Vector3(0, -1, 1);
-                translateRightWings = new Vector3(3, 0, 3);
-                wingAngle = 0.2f;
-            }
+            double delta = (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+            // this code animates the bat on its own
+            if (angle >= -.5f && angleChange == false)
+                angle += (float)(Math.PI * rate * delta);
             else
+                angle -= (float)(Math.PI * rate * delta);
+            if (angle > Math.PI / 4)
             {
-                translateRightWings = translateLeftWings = new Vector3(0, 0, 0);
-                wingAngle = 0;
+                angle = (float)Math.PI / 4;
+                angleChange = true;
             }
+            else if (angle < -.5f)
+            {
+                angle = -.5f;
+                angleChange = false;
+            }
+            leftwingBase.Transform = Matrix.CreateRotationY(angle) * leftBaseBind;
+            rightwingBase.Transform = Matrix.CreateRotationY(-angle) * rightBaseBind;
+
+            //
+            // Orientation updates
+            //
+
+            orientation *= Quaternion.CreateFromAxisAngle(new Vector3(0, 0, 1), -turnRate * MaxTurnRate * (float)delta);
+            orientation *= Quaternion.CreateFromAxisAngle(new Vector3(1, 0, 0), pitchRate * MaxPitchRate * (float)delta);
+            orientation.Normalize();
+
 
             float acceleration = thrust * MaxThrust - Drag * speed;
             speed += acceleration * (float)gameTime.ElapsedGameTime.TotalSeconds;
-
-            Matrix transform = Matrix.CreateRotationX(elevation) *
-                Matrix.CreateRotationY(azimuth);
+            Matrix transform = Matrix.CreateFromQuaternion(orientation);
 
             Vector3 directedThrust = Vector3.TransformNormal(new Vector3(0, 0, 1), transform);
             position += directedThrust * speed * (float)gameTime.ElapsedGameTime.TotalSeconds;
@@ -140,11 +199,7 @@ namespace Project1
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         public void Draw(GraphicsDeviceManager graphics, GameTime gameTime)
         {
-            Matrix transform = Matrix.CreateRotationX(elevation) *
-                Matrix.CreateRotationY(azimuth) *
-                Matrix.CreateTranslation(position);
-
-            DrawModel(graphics, batModel, transform);
+            DrawModel(graphics, batModel, Transform);
         }
 
 
@@ -152,22 +207,15 @@ namespace Project1
        {
            Matrix[] transforms = new Matrix[model.Bones.Count];
            model.CopyAbsoluteBoneTransformsTo(transforms);
-           transforms[rightwing1] = Matrix.CreateRotationY(-wingAngle) * transforms[rightwing1];
-           transforms[rightwing2] = Matrix.CreateRotationY(-wingAngle*2) * transforms[rightwing2] * Matrix.CreateTranslation(translateRightWings);
-           transforms[leftwing1] = Matrix.CreateRotationY(wingAngle) * transforms[leftwing1];
-           transforms[leftwing2] = Matrix.CreateRotationY(wingAngle*2) * transforms[leftwing2] * Matrix.CreateTranslation(translateLeftWings);
-           transforms[head] = Matrix.CreateRotationX(wingAngle) * transforms[head];
+
            foreach (ModelMesh mesh in model.Meshes)
            {
                foreach (BasicEffect effect in mesh.Effects)
                {
                    effect.EnableDefaultLighting();
                    effect.World = transforms[mesh.ParentBone.Index] * world;
-                   effect.View = Matrix.CreateLookAt(new Vector3(30, 30, 30),
-                                                     new Vector3(0, 0, 0),
-                                                     new Vector3(0, 1, 0));
-                   effect.Projection = Matrix.CreatePerspectiveFieldOfView(MathHelper.ToRadians(35),
-                       graphics.GraphicsDevice.Viewport.AspectRatio, 10, 10000);
+                   effect.View = game.Camera.View;
+                   effect.Projection = game.Camera.Projection;
                }
                mesh.Draw();
            }

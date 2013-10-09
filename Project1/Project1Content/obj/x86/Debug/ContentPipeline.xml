@@ -11,23 +11,44 @@
       <Time>2009-09-30T18:56:07.747-04:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Bat-rigid_0.xml</Key>
-        <Value>2013-10-05T15:59:55.826402-04:00</Value>
+        <Value>2013-10-09T18:19:42.895966-04:00</Value>
       </Dependency>
       <Request>H:\CSE 473\Project1\Project1\Project1\Project1\bin\x86\Debug\Content\FBX\46931940\Bat-rigid.fbm\BAT_2_0.xnb</Request>
     </Item>
     <Item>
-      <Source>Sky.FBX</Source>
-      <Name>Sky</Name>
+      <Source>Butterfly.FBX</Source>
+      <Name>Butterfly</Name>
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>H:\CSE 473\Project1\Project1\Project1\Project1\bin\x86\Debug\Content\Sky.xnb</Output>
-      <Time>2009-10-06T22:43:10.23-04:00</Time>
+      <Output>H:\CSE 473\Project1\Project1\Project1\Project1\bin\x86\Debug\Content\Butterfly.xnb</Output>
+      <Time>2008-09-21T16:56:53.286-04:00</Time>
       <Dependency>
-        <Key>obj\x86\Debug\Sky_0.xml</Key>
-        <Value>2013-10-05T15:59:57.021339-04:00</Value>
+        <Key>obj\x86\Debug\Butterfly_0.xml</Key>
+        <Value>2013-10-09T18:19:44.565878-04:00</Value>
       </Dependency>
-      <Request>H:\CSE 473\Project1\Project1\Project1\Project1\bin\x86\Debug\Content\FBX\B5851724\Sky.fbm\sky_0.xnb</Request>
+      <Request>H:\CSE 473\Project1\Project1\Project1\Project1\bin\x86\Debug\Content\FBX\4A9019AE\Butterfly.fbm\BUTTFACE_0.xnb</Request>
+      <Request>H:\CSE 473\Project1\Project1\Project1\Project1\bin\x86\Debug\Content\FBX\4A9019AE\Butterfly.fbm\BUTTWIFR_0.xnb</Request>
+      <Request>H:\CSE 473\Project1\Project1\Project1\Project1\bin\x86\Debug\Content\FBX\4A9019AE\Butterfly.fbm\BUTTWIBA_0.xnb</Request>
+      <Request>H:\CSE 473\Project1\Project1\Project1\Project1\bin\x86\Debug\Content\FBX\4A9019AE\Butterfly.fbm\BUTTBODY_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>font1.spritefont</Source>
+      <Name>font1</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>H:\CSE 473\Project1\Project1\Project1\Project1\bin\x86\Debug\Content\font1.xnb</Output>
+      <Time>2013-10-09T13:26:18.71691-04:00</Time>
+    </Item>
+    <Item>
+      <Source>batImg.jpg</Source>
+      <Name>batImg</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>H:\CSE 473\Project1\Project1\Project1\Project1\bin\x86\Debug\Content\batImg.xnb</Output>
+      <Time>2013-10-08T19:29:43.339966-04:00</Time>
     </Item>
     <Item>
       <Source>Bat-rigid.FBX</Source>
@@ -50,17 +71,17 @@
       </Parameters>
       <Options>None</Options>
       <Output>H:\CSE 473\Project1\Project1\Project1\Project1\bin\x86\Debug\Content\FBX\46931940\Bat-rigid.fbm\BAT_2_0.xnb</Output>
-      <Time>2013-10-05T15:59:55.488425-04:00</Time>
+      <Time>2013-10-09T18:19:42.570984-04:00</Time>
     </Item>
     <Item>
-      <Source>Sky.FBX</Source>
+      <Source>Butterfly.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>obj\x86\Debug\Sky_0.xml</Output>
-      <Time>2009-10-06T22:43:10.23-04:00</Time>
+      <Output>obj\x86\Debug\Butterfly_0.xml</Output>
+      <Time>2008-09-21T16:56:53.286-04:00</Time>
     </Item>
     <Item>
-      <Source>obj\x86\Debug\FBX\B5851724\Sky.fbm\sky.jpg</Source>
+      <Source>obj\x86\Debug\FBX\4A9019AE\Butterfly.fbm\BUTTFACE.jpg</Source>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Parameters>
@@ -72,8 +93,56 @@
         <Data Key="PremultiplyAlpha" Type="bool">true</Data>
       </Parameters>
       <Options>None</Options>
-      <Output>H:\CSE 473\Project1\Project1\Project1\Project1\bin\x86\Debug\Content\FBX\B5851724\Sky.fbm\sky_0.xnb</Output>
-      <Time>2013-10-05T15:59:57.00634-04:00</Time>
+      <Output>H:\CSE 473\Project1\Project1\Project1\Project1\bin\x86\Debug\Content\FBX\4A9019AE\Butterfly.fbm\BUTTFACE_0.xnb</Output>
+      <Time>2013-10-09T18:19:43.942913-04:00</Time>
+    </Item>
+    <Item>
+      <Source>obj\x86\Debug\FBX\4A9019AE\Butterfly.fbm\BUTTWIFR.jpg</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>H:\CSE 473\Project1\Project1\Project1\Project1\bin\x86\Debug\Content\FBX\4A9019AE\Butterfly.fbm\BUTTWIFR_0.xnb</Output>
+      <Time>2013-10-09T18:19:43.949908-04:00</Time>
+    </Item>
+    <Item>
+      <Source>obj\x86\Debug\FBX\4A9019AE\Butterfly.fbm\BUTTWIBA.jpg</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>H:\CSE 473\Project1\Project1\Project1\Project1\bin\x86\Debug\Content\FBX\4A9019AE\Butterfly.fbm\BUTTWIBA_0.xnb</Output>
+      <Time>2013-10-09T18:19:43.960915-04:00</Time>
+    </Item>
+    <Item>
+      <Source>obj\x86\Debug\FBX\4A9019AE\Butterfly.fbm\BUTTBODY.jpg</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>H:\CSE 473\Project1\Project1\Project1\Project1\bin\x86\Debug\Content\FBX\4A9019AE\Butterfly.fbm\BUTTBODY_0.xnb</Output>
+      <Time>2013-10-09T18:19:43.970912-04:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -113,7 +182,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2011-08-11T11:45:58.102539-04:00</Value>
+        <Value>2011-08-12T03:47:40.6058956-04:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

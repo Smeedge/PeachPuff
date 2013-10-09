@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Project1
 {
-    class Camera
+    public class Camera
     {
         #region Fields
 
@@ -16,7 +16,7 @@ namespace Project1
         /// <summary>
         /// The eye position in space
         /// </summary>
-        private Vector3 eye = new Vector3(1000, 1000, 1000);
+        private Vector3 eye = new Vector3(100, 100, 100);
 
         /// <summary>
         /// The location we are looking at in space.
@@ -43,7 +43,9 @@ namespace Project1
 
         private bool useChaseCamera = false;
         private Vector3 desiredEye = Vector3.Zero;
+        private Vector3 desiredUp = Vector3.Zero;
         private Vector3 velocity = Vector3.Zero;
+        private Vector3 velocity2 = Vector3.Zero;
         private float stiffness = 100;
         private float damping = 60;
 
@@ -63,6 +65,7 @@ namespace Project1
 
         public bool UseChaseCamera { get { return useChaseCamera; } set { useChaseCamera = value; } }
         public Vector3 DesiredEye { get { return desiredEye; } set { desiredEye = value; } }
+        public Vector3 DesiredUp { get { return desiredUp; } set { desiredUp = value; } }
         public float Stiffness { get { return stiffness; } set { stiffness = value; } }
         public float Damping { get { return damping; } set { damping = value; } }
 
@@ -109,12 +112,12 @@ namespace Project1
         /// </summary>
         public void Reset()
         {
-            eye = new Vector3(1000, 1000, 1000);
+            eye = new Vector3(30, 30, 30);
             center = new Vector3(0, 0, 0);
             up = new Vector3(0, 1, 0);
             fov = MathHelper.ToRadians(35);
             znear = 10;
-            zfar = 10000;
+            zfar = 1000;
             mousePitchYaw = true;
             mousePanTilt = true;
             padPitchYaw = true;
@@ -246,11 +249,16 @@ namespace Project1
                 Vector3 stretch = desiredEye - eye;
                 Vector3 acceleration = stretch * stiffness - velocity * damping;
 
+                Vector3 stretch2 = desiredUp - up;
+                Vector3 accleration2 = stretch2 * stiffness - velocity2 * damping;
+
                 // Apply acceleration
                 velocity += acceleration * (float)gameTime.ElapsedGameTime.TotalSeconds;
+                velocity2 += acceleration * (float)gameTime.ElapsedGameTime.TotalSeconds;
 
                 // Apply velocity
                 eye += velocity * (float)gameTime.ElapsedGameTime.TotalSeconds;
+                up += velocity * (float)gameTime.ElapsedGameTime.TotalSeconds;
             }
         }
     }

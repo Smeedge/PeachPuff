@@ -11,10 +11,10 @@ using Microsoft.Xna.Framework.Media;
 
 namespace Project1
 {
-    class SplashGameScreen: GameScreen
+    public class SplashGameScreen: GameScreen
     {
-        private Texture2D splash;
-        private double time;
+        private SpriteFont font1;
+        private Texture2D bati;
 
         public SplashGameScreen(Project1 game): base(game)
         {
@@ -22,19 +22,30 @@ namespace Project1
 
         public override void LoadContent()
         {
-           // splash = Game.Content.Load<Texture2D>("sky");
+            font1 = Game.Content.Load<SpriteFont>("font1");
+            bati = Game.Content.Load<Texture2D>("batImg");
         }
 
         public override void Activate()
         {
             base.Activate();
-            time = 0;
         }
 
         public override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
-            time += gameTime.ElapsedGameTime.TotalSeconds;
+
+            KeyboardState keyBoardState = Keyboard.GetState();
+
+            if (keyBoardState.IsKeyDown(Keys.Enter))
+            {
+                Game.SetScreen(Project1.GameScreens.Project1);
+            }
+        }
+
+        public override void Draw(GameTime gameTime)
+        {
+            Game.GraphicsDevice.Clear(Color.Black);
         }
 
         public override void DrawSprites(GameTime gameTime, SpriteBatch spriteBatch)
@@ -46,7 +57,9 @@ namespace Project1
             int tooWide = imgWid - width;
 
             Rectangle rect = new Rectangle(-tooWide / 2, 0, imgWid, height);
-           // spriteBatch.Draw(splash, rect, Color.White);
+            
+            spriteBatch.Draw(bati, rect, Color.Cyan);
+            spriteBatch.DrawString(font1, " Press enter                             to begin", new Vector2(65, 270), Color.Cyan);
         }
     }
 }
