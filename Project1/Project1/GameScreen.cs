@@ -11,23 +11,18 @@ using Microsoft.Xna.Framework.Media;
 
 namespace Project1
 {
-    class GameScreen
+    public class GameScreen
     {
         private Project1 game;
 
         public Project1 Game { get { return game; } }
 
-        public GameScreen() {}
         public GameScreen(Project1 game)
         {
             this.game = game;
         }
 
-        public virtual void Initialize()
-        {
-
-        }
-
+        public virtual void Initialize() { }
         public virtual void LoadContent() {}
         public virtual void Activate() {}
         public virtual void Deactivate() { }
