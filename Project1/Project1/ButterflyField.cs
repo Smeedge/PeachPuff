@@ -33,6 +33,7 @@ namespace Project1
             public Model butterflyModel;
             public Vector3 position;
             public Vector3 velocity;
+            public float size;
             public float angle = -.5f;
             public float rate = 3f;
             public bool angleChange = false;
@@ -51,17 +52,18 @@ namespace Project1
                 butter_fly.butterflyModel = butterfly;
                 butter_fly.position = RandomVector(-80, 80);
                 butter_fly.velocity = RandomVector(-40, 40);
+                butter_fly.size = 10;
+
                 if (butter_fly.position.Length() < 100)
                     continue;
                 butterflys.AddLast(butter_fly);
             }
         }
 
-        private Vector3 RandomVector(float min, float max)
+        public Vector3 RandomVector(float min, float max)
         {
             return new Vector3((float)(min + (random.NextDouble() * (max - min))),
-                (float)(min + (random.NextDouble() * (max - min))),
-                (float)(min + (random.NextDouble() * (max - min))));
+                (float)(min + (random.NextDouble() * (max - min))), 0);
         }
 
         /// <summary>
@@ -93,7 +95,7 @@ namespace Project1
             {
                 butter_fly.position += butter_fly.velocity * delta;
 
-                // this code animates the bat on its own
+                // this code animates the butterfly
                 if (butter_fly.angle >= -.5f && butter_fly.angleChange == false)
                     butter_fly.angle += (float)(Math.PI * butter_fly.rate * delta);
                 else
@@ -144,6 +146,62 @@ namespace Project1
                 }
                 mesh.Draw();
             }
+        }
+
+        private void RemoveButterfly(Vector3 position)
+        {
+            for (LinkedListNode<Butterfly> butterflyNode = butterflys.First; butterflyNode != null; )
+            {
+                LinkedListNode<Butterfly> nextNode = butterflyNode.Next;
+                Butterfly butter_fly = butterflyNode.Value;
+
+                if (position == butter_fly.position)
+                {
+                    // The butterfly has been eaten. Remove it and return true.
+                    Butterfly newButterfly = new Butterfly();
+                    newButterfly.size = butter_fly.size;
+                    newButterfly.butterflyModel = butter_fly.butterflyModel;
+                    newButterfly.velocity = RandomVector(-40, 40);
+                    newButterfly.position = RandomVector(-80, 80);
+
+                    // Delete the original butterfly
+                    butterflys.Remove(butterflyNode);
+                    // Add the new butterfly
+                    butterflys.AddLast(newButterfly);
+                }
+                butterflyNode = nextNode;
+            }
+
+        }
+
+     
+
+        public bool TestSphereForCollision(BoundingSphere sphere)
+        {
+            for (LinkedListNode<Butterfly> butterflyNode = butterflys.First; butterflyNode != null; )
+            {
+                LinkedListNode<Butterfly> nextNode = butterflyNode.Next;
+                Butterfly butter_fly = butterflyNode.Value;
+
+                // Obtain a bounding sphere for the butterfly. 
+                BoundingSphere bs = butterfly.Meshes[0].BoundingSphere;
+                bs = bs.Transform(butterfly.Bones[0].Transform);
+
+                // Move this to world coordinates. 
+                bs.Radius *= butter_fly.size;
+                bs.Center += butter_fly.position;
+
+                if (sphere.Intersects(bs))
+                {
+                    System.Diagnostics.Trace.WriteLine("It collided!\n");
+                    RemoveButterfly(butter_fly.position);
+                    return true;
+                }
+
+                butterflyNode = nextNode;
+            }
+
+            return false;
         }
 
     }

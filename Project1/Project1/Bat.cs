@@ -90,6 +90,9 @@ namespace Project1
 
         #region Properties
 
+        public Model Model { get { return batModel; } }
+
+
         /// <summary>
         /// The current bat thrust
         /// </summary>

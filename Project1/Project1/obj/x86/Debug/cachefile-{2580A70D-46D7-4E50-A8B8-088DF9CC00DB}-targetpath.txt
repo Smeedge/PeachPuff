@@ -1,9 +1,12 @@
 Content\Bat-rigid.xnb
-Content\FBX\46931940\Bat-rigid.fbm\BAT_2_0.xnb
-Content\font1.xnb
-Content\batImg.xnb
+Content\Sky.xnb
 Content\Butterfly.xnb
-Content\FBX\4A9019AE\Butterfly.fbm\BUTTFACE_0.xnb
-Content\FBX\4A9019AE\Butterfly.fbm\BUTTWIFR_0.xnb
-Content\FBX\4A9019AE\Butterfly.fbm\BUTTWIBA_0.xnb
-Content\FBX\4A9019AE\Butterfly.fbm\BUTTBODY_0.xnb
+Content\FBX\FCCE1F92\Bat-rigid.fbm\BAT_2_0.xnb
+Content\FBX\45E31D76\Sky.fbm\sky_0.xnb
+Content\FBX\DA2000\Butterfly.fbm\BUTTFACE_0.xnb
+Content\FBX\DA2000\Butterfly.fbm\BUTTWIFR_0.xnb
+Content\FBX\DA2000\Butterfly.fbm\BUTTWIBA_0.xnb
+Content\FBX\DA2000\Butterfly.fbm\BUTTBODY_0.xnb
+Content\Project1Audio.xgs
+Content\Wave Bank.xwb
+Content\Sound Bank.xsb

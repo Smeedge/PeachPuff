@@ -7,54 +7,27 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>H:\CSE 473\Project1\Project1\Project1\Project1\bin\x86\Debug\Content\Bat-rigid.xnb</Output>
-      <Time>2009-09-30T18:56:07.747-04:00</Time>
+      <Output>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\Bat-rigid.xnb</Output>
+      <Time>2013-10-05T15:59:35.8304425-04:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Bat-rigid_0.xml</Key>
-        <Value>2013-10-08T17:41:24.554146-04:00</Value>
+        <Value>2013-10-09T16:34:31.4137545-04:00</Value>
       </Dependency>
-      <Request>H:\CSE 473\Project1\Project1\Project1\Project1\bin\x86\Debug\Content\FBX\46931940\Bat-rigid.fbm\BAT_2_0.xnb</Request>
+      <Request>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\FBX\FCCE1F92\Bat-rigid.fbm\BAT_2_0.xnb</Request>
     </Item>
     <Item>
-      <Source>Bat-rigid.FBX</Source>
+      <Source>Sky.FBX</Source>
+      <Name>Sky</Name>
       <Importer>FbxImporter</Importer>
-      <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>obj\x86\Debug\Bat-rigid_0.xml</Output>
-      <Time>2009-09-30T18:56:07.747-04:00</Time>
-    </Item>
-    <Item>
-      <Source>obj\x86\Debug\FBX\46931940\Bat-rigid.fbm\BAT_2.JPG</Source>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Parameters>
-        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
-        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
-        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
-        <Data Key="GenerateMipmaps" Type="bool">true</Data>
-        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
-        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
-      </Parameters>
+      <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>H:\CSE 473\Project1\Project1\Project1\Project1\bin\x86\Debug\Content\FBX\46931940\Bat-rigid.fbm\BAT_2_0.xnb</Output>
-      <Time>2013-10-08T17:41:24.264166-04:00</Time>
-    </Item>
-    <Item>
-      <Source>font1.spritefont</Source>
-      <Name>font1</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-      <Options>None</Options>
-      <Output>H:\CSE 473\Project1\Project1\Project1\Project1\bin\x86\Debug\Content\font1.xnb</Output>
-      <Time>2013-10-08T19:20:32.71612-04:00</Time>
-    </Item>
-    <Item>
-      <Source>batImg.jpg</Source>
-      <Name>batImg</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>H:\CSE 473\Project1\Project1\Project1\Project1\bin\x86\Debug\Content\batImg.xnb</Output>
-      <Time>2013-10-08T19:29:43.339966-04:00</Time>
+      <Output>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\Sky.xnb</Output>
+      <Time>2013-10-05T15:59:35.8904459-04:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Sky_0.xml</Key>
+        <Value>2013-10-09T16:34:32.9278411-04:00</Value>
+      </Dependency>
+      <Request>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\FBX\45E31D76\Sky.fbm\sky_0.xnb</Request>
     </Item>
     <Item>
       <Source>Butterfly.FBX</Source>
@@ -62,26 +35,72 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>H:\CSE 473\Project1\Project1\Project1\Project1\bin\x86\Debug\Content\Butterfly.xnb</Output>
-      <Time>2008-09-21T16:56:53.286-04:00</Time>
+      <Output>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\Butterfly.xnb</Output>
+      <Time>2013-10-09T16:31:03.1848445-04:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Butterfly_0.xml</Key>
-        <Value>2013-10-08T19:46:50.544523-04:00</Value>
+        <Value>2013-10-09T16:34:34.5459336-04:00</Value>
       </Dependency>
-      <Request>H:\CSE 473\Project1\Project1\Project1\Project1\bin\x86\Debug\Content\FBX\4A9019AE\Butterfly.fbm\BUTTFACE_0.xnb</Request>
-      <Request>H:\CSE 473\Project1\Project1\Project1\Project1\bin\x86\Debug\Content\FBX\4A9019AE\Butterfly.fbm\BUTTWIFR_0.xnb</Request>
-      <Request>H:\CSE 473\Project1\Project1\Project1\Project1\bin\x86\Debug\Content\FBX\4A9019AE\Butterfly.fbm\BUTTWIBA_0.xnb</Request>
-      <Request>H:\CSE 473\Project1\Project1\Project1\Project1\bin\x86\Debug\Content\FBX\4A9019AE\Butterfly.fbm\BUTTBODY_0.xnb</Request>
+      <Request>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\FBX\DA2000\Butterfly.fbm\BUTTFACE_0.xnb</Request>
+      <Request>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\FBX\DA2000\Butterfly.fbm\BUTTWIFR_0.xnb</Request>
+      <Request>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\FBX\DA2000\Butterfly.fbm\BUTTWIBA_0.xnb</Request>
+      <Request>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\FBX\DA2000\Butterfly.fbm\BUTTBODY_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>Bat-rigid.FBX</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Bat-rigid_0.xml</Output>
+      <Time>2013-10-05T15:59:35.8304425-04:00</Time>
+    </Item>
+    <Item>
+      <Source>obj\x86\Debug\FBX\FCCE1F92\Bat-rigid.fbm\BAT_2.JPG</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\FBX\FCCE1F92\Bat-rigid.fbm\BAT_2_0.xnb</Output>
+      <Time>2013-10-09T16:34:30.6387102-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Sky.FBX</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Sky_0.xml</Output>
+      <Time>2013-10-05T15:59:35.8904459-04:00</Time>
+    </Item>
+    <Item>
+      <Source>obj\x86\Debug\FBX\45E31D76\Sky.fbm\sky.jpg</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\FBX\45E31D76\Sky.fbm\sky_0.xnb</Output>
+      <Time>2013-10-09T16:34:32.8578371-04:00</Time>
     </Item>
     <Item>
       <Source>Butterfly.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Butterfly_0.xml</Output>
-      <Time>2008-09-21T16:56:53.286-04:00</Time>
+      <Time>2013-10-09T16:31:03.1848445-04:00</Time>
     </Item>
     <Item>
-      <Source>obj\x86\Debug\FBX\4A9019AE\Butterfly.fbm\BUTTFACE.jpg</Source>
+      <Source>obj\x86\Debug\FBX\DA2000\Butterfly.fbm\BUTTFACE.jpg</Source>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Parameters>
@@ -93,11 +112,11 @@
         <Data Key="PremultiplyAlpha" Type="bool">true</Data>
       </Parameters>
       <Options>None</Options>
-      <Output>H:\CSE 473\Project1\Project1\Project1\Project1\bin\x86\Debug\Content\FBX\4A9019AE\Butterfly.fbm\BUTTFACE_0.xnb</Output>
-      <Time>2013-10-08T19:46:49.903561-04:00</Time>
+      <Output>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\FBX\DA2000\Butterfly.fbm\BUTTFACE_0.xnb</Output>
+      <Time>2013-10-09T16:34:33.7928906-04:00</Time>
     </Item>
     <Item>
-      <Source>obj\x86\Debug\FBX\4A9019AE\Butterfly.fbm\BUTTWIFR.jpg</Source>
+      <Source>obj\x86\Debug\FBX\DA2000\Butterfly.fbm\BUTTWIFR.jpg</Source>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Parameters>
@@ -109,11 +128,11 @@
         <Data Key="PremultiplyAlpha" Type="bool">true</Data>
       </Parameters>
       <Options>None</Options>
-      <Output>H:\CSE 473\Project1\Project1\Project1\Project1\bin\x86\Debug\Content\FBX\4A9019AE\Butterfly.fbm\BUTTWIFR_0.xnb</Output>
-      <Time>2013-10-08T19:46:49.911561-04:00</Time>
+      <Output>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\FBX\DA2000\Butterfly.fbm\BUTTWIFR_0.xnb</Output>
+      <Time>2013-10-09T16:34:33.7958907-04:00</Time>
     </Item>
     <Item>
-      <Source>obj\x86\Debug\FBX\4A9019AE\Butterfly.fbm\BUTTWIBA.jpg</Source>
+      <Source>obj\x86\Debug\FBX\DA2000\Butterfly.fbm\BUTTWIBA.jpg</Source>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Parameters>
@@ -125,11 +144,11 @@
         <Data Key="PremultiplyAlpha" Type="bool">true</Data>
       </Parameters>
       <Options>None</Options>
-      <Output>H:\CSE 473\Project1\Project1\Project1\Project1\bin\x86\Debug\Content\FBX\4A9019AE\Butterfly.fbm\BUTTWIBA_0.xnb</Output>
-      <Time>2013-10-08T19:46:49.930555-04:00</Time>
+      <Output>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\FBX\DA2000\Butterfly.fbm\BUTTWIBA_0.xnb</Output>
+      <Time>2013-10-09T16:34:33.800891-04:00</Time>
     </Item>
     <Item>
-      <Source>obj\x86\Debug\FBX\4A9019AE\Butterfly.fbm\BUTTBODY.jpg</Source>
+      <Source>obj\x86\Debug\FBX\DA2000\Butterfly.fbm\BUTTBODY.jpg</Source>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Parameters>
@@ -141,8 +160,8 @@
         <Data Key="PremultiplyAlpha" Type="bool">true</Data>
       </Parameters>
       <Options>None</Options>
-      <Output>H:\CSE 473\Project1\Project1\Project1\Project1\bin\x86\Debug\Content\FBX\4A9019AE\Butterfly.fbm\BUTTBODY_0.xnb</Output>
-      <Time>2013-10-08T19:46:49.93856-04:00</Time>
+      <Output>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\FBX\DA2000\Butterfly.fbm\BUTTBODY_0.xnb</Output>
+      <Time>2013-10-09T16:34:33.8058913-04:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -150,39 +169,39 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>H:\CSE 473\Project1\Project1\Project1\Project1Content\</RootDirectory>
-      <LoggerRootDirectory>H:\CSE 473\Project1\Project1\Project1\Project1\</LoggerRootDirectory>
-      <IntermediateDirectory>H:\CSE 473\Project1\Project1\Project1\Project1Content\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>H:\CSE 473\Project1\Project1\Project1\Project1\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1Content\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1Content\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
-        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
         <Value>2010-08-23T12:41:18-04:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
         <Value>2010-08-23T12:41:18-04:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
         <Value>2010-08-23T12:41:18-04:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
         <Value>2010-08-23T12:41:18-04:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
         <Value>2010-08-23T12:41:18-04:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
         <Value>2010-08-23T12:41:18-04:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2011-08-12T03:42:51.7128906-04:00</Value>
+        <Value>2013-08-29T22:58:41.9979403-04:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

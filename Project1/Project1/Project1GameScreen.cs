@@ -17,6 +17,21 @@ namespace Project1
         private ButterflyField butterflyField;
         private KeyboardState lastKeyboardState;
 
+        /// <summary>
+        /// A reference to the audio engine we use
+        /// </summary>
+        public AudioEngine audioEngine;
+
+        /// <summary>
+        /// The loaded audio wave bank
+        /// </summary>
+        public WaveBank waveBank;
+
+        /// <summary>
+        /// The loaded audio sound bank
+        /// </summary>
+        public SoundBank soundBank;
+
         public Project1GameScreen(Project1 game): base(game)
         {
             bat = new Bat(Game);
@@ -33,6 +48,9 @@ namespace Project1
         {
             bat.LoadContent(Game.Content);
             butterflyField.LoadContent(Game.Content);
+            audioEngine = new AudioEngine("Content\\Project1Audio.xgs");
+            waveBank = new WaveBank(audioEngine, "Content\\Wave Bank.xwb");
+            soundBank = new SoundBank(audioEngine, "Content\\Sound Bank.xsb");
             //scoreFont = Content.Load<SpriteFont>("scorefont");
         }
         public override void Activate()
@@ -81,8 +99,20 @@ namespace Project1
             {
                 bat.PitchRate = -1;
             }
-            
-           
+
+
+            Matrix[] transforms = new Matrix[bat.Model.Bones.Count];
+            bat.Model.CopyAbsoluteBoneTransformsTo(transforms);
+            Matrix batTransform = bat.Transform;
+
+            foreach (ModelMesh mesh in bat.Model.Meshes)
+            {
+                BoundingSphere bs = mesh.BoundingSphere;
+                bs = bs.Transform(transforms[mesh.ParentBone.Index] * batTransform);
+                bool collided = butterflyField.TestSphereForCollision(bs);
+                
+            }
+
 
             lastKeyboardState = keyBoardState;
             bat.Update(gameTime);

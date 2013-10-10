@@ -22,7 +22,7 @@ namespace Project1
         private KeyboardState lastKeyboardState;
 
         // our game screens
-        Project1GameScreen project1Screen = null;
+        public Project1GameScreen project1Screen = null;
         SplashGameScreen splashScreen = null;
         // The game screen we are playing
         GameScreen screen = null;
