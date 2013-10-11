@@ -43,7 +43,7 @@ namespace Project1
         /// <summary>
         /// Current position
         /// </summary>
-        private Vector3 position = Vector3.Zero;
+        private Vector3 position = new Vector3(0, 0, 20);
 
         /// <summary>
         /// How fast we are going (cm/sec)
@@ -58,7 +58,7 @@ namespace Project1
         /// <summary>
         ///  Decelleration due to drag
         /// </summary>
-        private const float Drag = 1;
+        private const float Drag = 1.5f;
 
         /// <summary>
         /// Maximum thrust (cm/sec^2)
@@ -180,8 +180,8 @@ namespace Project1
             // Orientation updates
             //
 
-            orientation *= Quaternion.CreateFromAxisAngle(new Vector3(0, 0, 1), -turnRate * MaxTurnRate * (float)delta);
-            orientation *= Quaternion.CreateFromAxisAngle(new Vector3(1, 0, 0), pitchRate * MaxPitchRate * (float)delta);
+            orientation *= Quaternion.CreateFromAxisAngle(new Vector3(0, 1, 0), -turnRate * MaxTurnRate * (float)delta);
+            //orientation *= Quaternion.CreateFromAxisAngle(new Vector3(1, 0, 0), pitchRate * MaxPitchRate * (float)delta);
             orientation.Normalize();
 
 

@@ -50,7 +50,7 @@ namespace Project1
                 Butterfly butter_fly = new Butterfly();
                 butter_fly.butterflyModel = butterfly;
                 butter_fly.position = RandomVector(-80, 80);
-                butter_fly.velocity = RandomVector(-40, 40);
+                butter_fly.velocity = RandomVector(-10, 10);
                 if (butter_fly.position.Length() < 100)
                     continue;
                 butterflys.AddLast(butter_fly);
@@ -60,7 +60,7 @@ namespace Project1
         private Vector3 RandomVector(float min, float max)
         {
             return new Vector3((float)(min + (random.NextDouble() * (max - min))),
-                (float)(min + (random.NextDouble() * (max - min))),
+                0,
                 (float)(min + (random.NextDouble() * (max - min))));
         }
 
@@ -123,7 +123,7 @@ namespace Project1
         {
             foreach (Butterfly butter_fly in butterflys)
             {
-                DrawModel(graphics, butterfly, Matrix.CreateScale(10) * Matrix.CreateTranslation(butter_fly.position));
+                DrawModel(graphics, butterfly, Matrix.CreateScale(2) * Matrix.CreateTranslation(butter_fly.position));
             }
         }
 

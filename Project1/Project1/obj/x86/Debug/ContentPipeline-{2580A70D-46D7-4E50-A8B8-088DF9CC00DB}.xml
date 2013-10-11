@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline" xmlns:Framework="Microsoft.Xna.Framework" xmlns:Processors="Microsoft.Xna.Framework.Content.Pipeline.Processors">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>Bat-rigid.FBX</Source>
+      <Name>Bat-rigid</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\Bat-rigid.xnb</Output>
+      <Time>2013-10-09T23:06:00.8845059-04:00</Time>
+      <Dependency>
+        <Key>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\obj\x86\Debug\Bat-rigid_0.xml</Key>
+        <Value>2013-10-09T23:26:34.9960931-04:00</Value>
+      </Dependency>
+      <Request>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\BAT_2_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>Butterfly.FBX</Source>
+      <Name>Butterfly</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\Butterfly.xnb</Output>
+      <Time>2013-10-09T23:07:59.2112738-04:00</Time>
+      <Dependency>
+        <Key>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\obj\x86\Debug\Butterfly_0.xml</Key>
+        <Value>2013-10-09T23:26:38.0962704-04:00</Value>
+      </Dependency>
+      <Request>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\BUTTFACE_0.xnb</Request>
+      <Request>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\BUTTWIFR_0.xnb</Request>
+      <Request>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\BUTTWIBA_0.xnb</Request>
+      <Request>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\BUTTBODY_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>Bee.FBX</Source>
+      <Name>Bee</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\Bee.xnb</Output>
+      <Time>2013-10-09T23:06:01.0395148-04:00</Time>
+      <Dependency>
+        <Key>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\obj\x86\Debug\Bee_0.xml</Key>
+        <Value>2013-10-09T23:26:44.8856587-04:00</Value>
+      </Dependency>
+      <Request>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\gb3_0.xnb</Request>
+      <Request>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\gb1_0.xnb</Request>
+      <Request>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\gb2_0.xnb</Request>
+      <Request>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\gb4_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>GrassField2.FBX</Source>
+      <Name>GrassField2</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\GrassField2.xnb</Output>
+      <Time>2013-10-09T23:06:01.0505154-04:00</Time>
+      <Dependency>
+        <Key>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\obj\x86\Debug\GrassField2_0.xml</Key>
+        <Value>2013-10-09T23:26:45.361686-04:00</Value>
+      </Dependency>
+      <Request>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\grass2_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>font1.spritefont</Source>
+      <Name>font1</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\font1.xnb</Output>
+      <Time>2013-10-09T23:19:18.5251284-04:00</Time>
+    </Item>
+    <Item>
+      <Source>batImg.jpg</Source>
+      <Name>batImg</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\batImg.xnb</Output>
+      <Time>2013-10-09T23:07:59.2162741-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Bat-rigid.FBX</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\obj\x86\Debug\Bat-rigid_0.xml</Output>
+      <Time>2013-10-09T23:06:00.8845059-04:00</Time>
+    </Item>
+    <Item>
+      <Source>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\obj\x86\Debug\FBX\D091FAF\Bat-rigid.fbm\BAT_2.JPG</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\BAT_2_0.xnb</Output>
+      <Time>2013-10-09T23:26:34.4310608-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Butterfly.FBX</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\obj\x86\Debug\Butterfly_0.xml</Output>
+      <Time>2013-10-09T23:07:59.2112738-04:00</Time>
+    </Item>
+    <Item>
+      <Source>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\obj\x86\Debug\FBX\1106201D\Butterfly.fbm\BUTTFACE.jpg</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\BUTTFACE_0.xnb</Output>
+      <Time>2013-10-09T23:26:37.4582339-04:00</Time>
+    </Item>
+    <Item>
+      <Source>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\obj\x86\Debug\FBX\1106201D\Butterfly.fbm\BUTTWIFR.jpg</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\BUTTWIFR_0.xnb</Output>
+      <Time>2013-10-09T23:26:37.4612341-04:00</Time>
+    </Item>
+    <Item>
+      <Source>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\obj\x86\Debug\FBX\1106201D\Butterfly.fbm\BUTTWIBA.jpg</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\BUTTWIBA_0.xnb</Output>
+      <Time>2013-10-09T23:26:37.4642343-04:00</Time>
+    </Item>
+    <Item>
+      <Source>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\obj\x86\Debug\FBX\1106201D\Butterfly.fbm\BUTTBODY.jpg</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\BUTTBODY_0.xnb</Output>
+      <Time>2013-10-09T23:26:37.4682345-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Bee.FBX</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\obj\x86\Debug\Bee_0.xml</Output>
+      <Time>2013-10-09T23:06:01.0395148-04:00</Time>
+    </Item>
+    <Item>
+      <Source>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\obj\x86\Debug\FBX\54621D68\Bee.fbm\gb3.jpg</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\gb3_0.xnb</Output>
+      <Time>2013-10-09T23:26:38.7843098-04:00</Time>
+    </Item>
+    <Item>
+      <Source>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\obj\x86\Debug\FBX\54621D68\Bee.fbm\gb1.jpg</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\gb1_0.xnb</Output>
+      <Time>2013-10-09T23:26:38.7873099-04:00</Time>
+    </Item>
+    <Item>
+      <Source>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\obj\x86\Debug\FBX\54621D68\Bee.fbm\gb2.jpg</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\gb2_0.xnb</Output>
+      <Time>2013-10-09T23:26:38.7903101-04:00</Time>
+    </Item>
+    <Item>
+      <Source>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\obj\x86\Debug\FBX\54621D68\Bee.fbm\gb4.jpg</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\gb4_0.xnb</Output>
+      <Time>2013-10-09T23:26:38.7933103-04:00</Time>
+    </Item>
+    <Item>
+      <Source>GrassField2.FBX</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\obj\x86\Debug\GrassField2_0.xml</Output>
+      <Time>2013-10-09T23:06:01.0505154-04:00</Time>
+    </Item>
+    <Item>
+      <Source>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\obj\x86\Debug\FBX\507E2092\GrassField2.fbm\grass2.jpg</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\grass2_0.xnb</Output>
+      <Time>2013-10-09T23:26:45.3316842-04:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <ContentProjectGUID>{2580A70D-46D7-4E50-A8B8-088DF9CC00DB}</ContentProjectGUID>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>HiDef</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1Content\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\c011in\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2011-09-01T16:22:30-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2011-09-01T16:22:30-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2011-09-01T16:22:30-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2011-09-01T16:22:30-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2011-09-01T16:22:30-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2011-09-01T16:22:30-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2013-09-03T20:40:42.3112574-04:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>

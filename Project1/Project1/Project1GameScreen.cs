@@ -14,6 +14,8 @@ namespace Project1
     public class Project1GameScreen : GameScreen
     {
         private Bat bat;
+        private Bee bee;
+        private Field field;
         private ButterflyField butterflyField;
         private KeyboardState lastKeyboardState;
 
@@ -21,6 +23,8 @@ namespace Project1
         {
             bat = new Bat(Game);
             butterflyField = new ButterflyField(Game);
+            bee = new Bee(Game, bat);
+            field = new Field(Game);
         }
 
         public override void Initialize()
@@ -33,6 +37,8 @@ namespace Project1
         {
             bat.LoadContent(Game.Content);
             butterflyField.LoadContent(Game.Content);
+            bee.LoadContent(Game.Content);
+            field.LoadContent(Game.Content);
             //scoreFont = Content.Load<SpriteFont>("scorefont");
         }
         public override void Activate()
@@ -51,7 +57,7 @@ namespace Project1
             // moves the bat
             if (keyBoardState.IsKeyDown(Keys.Space))
             {
-                bat.Thrust = 1;
+                bat.Thrust = 10;
             }
             else
             {
@@ -72,24 +78,17 @@ namespace Project1
                 bat.TurnRate = 0;
             }
 
-            // elevate the bat
-            if (keyBoardState.IsKeyDown(Keys.Up))
-            {
-                bat.PitchRate = 1;
-            }
-            else if (keyBoardState.IsKeyDown(Keys.Down))
-            {
-                bat.PitchRate = -1;
-            }
             
            
 
             lastKeyboardState = keyBoardState;
             bat.Update(gameTime);
             butterflyField.Update(gameTime);
-            Game.Camera.DesiredEye = Vector3.Transform(new Vector3(0, 30, -30), bat.Transform);
+            bee.Update(gameTime);
+            field.Update(gameTime);
+            Game.Camera.DesiredEye = new Vector3(bat.Position.X, 450, bat.Position.Z);
             Game.Camera.Center = bat.Position;
-            Game.Camera.Up = bat.Transform.Up;
+            Game.Camera.Up = bat.Transform.Backward;
             Game.Camera.Update(gameTime);
             base.Update(gameTime);
         }
@@ -98,6 +97,8 @@ namespace Project1
             Game.GraphicsDevice.Clear(Color.White);
             bat.Draw(Game.Graphics, gameTime);
             butterflyField.Draw(Game.Graphics, gameTime);
+            bee.Draw(Game.Graphics, gameTime);
+            field.Draw(Game.Graphics, gameTime);
         }
         public override void DrawSprites(GameTime gameTime, SpriteBatch spriteBatch)
         {
