@@ -1,0 +1,3 @@
+Content\Project1Audio.xgs
+Content\Wave Bank.xwb
+Content\Sound Bank.xsb

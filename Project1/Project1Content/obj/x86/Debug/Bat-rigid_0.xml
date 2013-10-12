@@ -3,7 +3,7 @@
   <Asset Type="Graphics:MeshContent">
     <Name>bat</Name>
     <Identity>
-      <SourceFilename>H:\CSE 473\Project1\Project1\Project1\Project1Content\Bat-rigid.FBX</SourceFilename>
+      <SourceFilename>H:\CSE 473\PROJECT1-C\Project1\Project1Content\Bat-rigid.FBX</SourceFilename>
       <SourceTool>FbxImporter</SourceTool>
     </Identity>
     <Transform>1 0 0 0 0 2.83276934E-16 -1 0 0 1 2.83276934E-16 0 -1.86784959 0.430205554 -0.01207003 1</Transform>
@@ -128,7 +128,7 @@
     <Resource ID="#Resource1" Type="Graphics:BasicMaterialContent">
       <Name>bat</Name>
       <Identity>
-        <SourceFilename>H:\CSE 473\Project1\Project1\Project1\Project1Content\Bat-rigid.FBX</SourceFilename>
+        <SourceFilename>H:\CSE 473\PROJECT1-C\Project1\Project1Content\Bat-rigid.FBX</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>
@@ -155,6 +155,6 @@
     </Resource>
   </Resources>
   <ExternalReferences>
-    <ExternalReference ID="#External1" TargetType="Graphics:TextureContent">FBX\46931940\Bat-rigid.fbm\BAT_2.JPG</ExternalReference>
+    <ExternalReference ID="#External1" TargetType="Graphics:TextureContent">FBX\9455164C\Bat-rigid.fbm\BAT_2.JPG</ExternalReference>
   </ExternalReferences>
 </XnaContent>

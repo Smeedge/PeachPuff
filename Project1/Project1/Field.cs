@@ -17,12 +17,14 @@ namespace Project1
     {
         private Project1 game;   // the game
         private Model fieldModel; // fields model
-        private Bat bat;
+        Vector3 position = new Vector3(0, -30, 0);
+        private Matrix location = Matrix.Identity;
 
-        public Field(Project1 game, Bat bat)
+        public Field(Project1 game)
         {
             this.game = game;
-            this.bat = bat;
+            location = Matrix.CreateTranslation(position) * Matrix.CreateScale(10);
+            
         }
 
         /// <summary>
@@ -55,7 +57,7 @@ namespace Project1
         {
 
             // TODO: scale field by a factor of 10
-            DrawModel(graphics, fieldModel, Matrix.Identity);
+            DrawModel(graphics, fieldModel, location);
         }
 
 
@@ -70,11 +72,8 @@ namespace Project1
                 {
                     effect.EnableDefaultLighting();
                     effect.World = transforms[mesh.ParentBone.Index] * world;
-                    effect.View = Matrix.CreateLookAt(new Vector3(0, 600, 0),
-                                                      new Vector3(0, 0, 0),
-                                                      new Vector3(1, 0, 0));
-                    effect.Projection = Matrix.CreatePerspectiveFieldOfView(MathHelper.ToRadians(35),
-                        graphics.GraphicsDevice.Viewport.AspectRatio, 10, 10000);
+                    effect.View = game.Camera.View;
+                    effect.Projection = game.Camera.Projection;
                 }
                 mesh.Draw();
             }

@@ -14,13 +14,26 @@ namespace Project1
     public class Project1GameScreen : GameScreen
     {
         private Bat bat;
+        private Bee bee;
+        private Field field;
         private ButterflyField butterflyField;
         private KeyboardState lastKeyboardState;
+        private SpriteFont scoreFont;
 
-        public Project1GameScreen(Project1 game): base(game)
+        public int score = 0;
+        private int time = 0;
+        private float timeM = 0;
+
+        
+
+
+        public Project1GameScreen(Project1 game)
+            : base(game)
         {
             bat = new Bat(Game);
             butterflyField = new ButterflyField(Game);
+            bee = new Bee(Game, bat);
+            field = new Field(Game);
         }
 
         public override void Initialize()
@@ -29,11 +42,13 @@ namespace Project1
             lastKeyboardState = Keyboard.GetState();
         }
 
-        public override void LoadContent() 
+        public override void LoadContent()
         {
             bat.LoadContent(Game.Content);
             butterflyField.LoadContent(Game.Content);
-            //scoreFont = Content.Load<SpriteFont>("scorefont");
+            bee.LoadContent(Game.Content);
+            field.LoadContent(Game.Content);
+            scoreFont = Game.Content.Load<SpriteFont>("font1");
         }
         public override void Activate()
         {
@@ -44,14 +59,14 @@ namespace Project1
         public override void Deactivate()
         {
         }
-        public override void Update(GameTime gameTime) 
+        public override void Update(GameTime gameTime)
         {
             KeyboardState keyBoardState = Keyboard.GetState();
 
             // moves the bat
             if (keyBoardState.IsKeyDown(Keys.Space))
             {
-                bat.Thrust = 1;
+                bat.Thrust = 10;
             }
             else
             {
@@ -72,42 +87,50 @@ namespace Project1
                 bat.TurnRate = 0;
             }
 
-            // elevate the bat
-            if (keyBoardState.IsKeyDown(Keys.Up))
-            {
-                bat.PitchRate = 1;
-            }
-            else if (keyBoardState.IsKeyDown(Keys.Down))
-            {
-                bat.PitchRate = -1;
-            }
+            time = gameTime.TotalGameTime.Seconds;
+            timeM = gameTime.TotalGameTime.Milliseconds / 100;
 
-
-            // to this is currently pausing the game, need to add reset 
-            if (keyBoardState.IsKeyDown(Keys.P))
-            {
-                Game.SetScreen(Project1.GameScreens.End);
-            }
 
             lastKeyboardState = keyBoardState;
             bat.Update(gameTime);
             butterflyField.Update(gameTime);
-            Game.Camera.DesiredEye = Vector3.Transform(new Vector3(0, 30, -30), bat.Transform);
+            bee.Update(gameTime);
+            field.Update(gameTime);
+            Game.Camera.DesiredEye = new Vector3(bat.Position.X, 250, bat.Position.Z);
             Game.Camera.Center = bat.Position;
-            Game.Camera.Up = bat.Transform.Up;
+            Game.Camera.Up = bat.Transform.Backward;
             Game.Camera.Update(gameTime);
+
+
+            Matrix[] transforms = new Matrix[bat.Model.Bones.Count];
+            bat.Model.CopyAbsoluteBoneTransformsTo(transforms);
+            Matrix batTransform = bat.Transform;
+
+            foreach (ModelMesh mesh in bat.Model.Meshes)
+            {
+                BoundingSphere bs = mesh.BoundingSphere;
+                bs = bs.Transform(transforms[mesh.ParentBone.Index] * batTransform);
+                bool collided = butterflyField.TestSphereForCollision(bs);
+
+                if (bee.TestSphereForCollision(bs))
+                    Game.SetScreen(Project1.GameScreens.End); //DETECT WHETHER BEE COLLIDED WITH BAT, IF SO, DISPLAY ENDGAME SCREEN
+            }
+
             base.Update(gameTime);
         }
-        public override void Draw(GameTime gameTime) 
+        public override void Draw(GameTime gameTime)
         {
-            Game.GraphicsDevice.Clear(Color.White);
+            Game.GraphicsDevice.Clear(Color.ForestGreen);
+            field.Draw(Game.Graphics, gameTime);
             bat.Draw(Game.Graphics, gameTime);
             butterflyField.Draw(Game.Graphics, gameTime);
+            bee.Draw(Game.Graphics, gameTime);
+            
         }
         public override void DrawSprites(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            
-           // spriteBatch.DrawString(scoreFont, "hi", new Vector2(10, 10), Color.White);
+            spriteBatch.DrawString(scoreFont, "Score: " + score.ToString(), new Vector2(10, 10), Color.Red);
+            spriteBatch.DrawString(scoreFont, "Time: " + time.ToString() + "." + timeM.ToString(), new Vector2(10, 40), Color.Yellow);
         }
     }
 }

@@ -108,9 +108,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bat.cs" />
+    <Compile Include="Bee.cs" />
     <Compile Include="ButterflyField.cs" />
     <Compile Include="Camera.cs" />
     <Compile Include="EndGameScreen.cs" />
+    <Compile Include="Field.cs" />
     <Compile Include="GameScreen.cs" />
     <Compile Include="Project1GameScreen.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

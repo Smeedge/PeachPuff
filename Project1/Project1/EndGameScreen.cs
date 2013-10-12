@@ -14,9 +14,10 @@ namespace Project1
     public class EndGameScreen: GameScreen
     {
         private SpriteFont font1;
-
-        public EndGameScreen(Project1 game): base(game)
+        private Project1GameScreen mainGameScreen;
+        public EndGameScreen(Project1 game, Project1GameScreen screen): base(game)
         {
+            mainGameScreen = screen;
         }
 
         public override void LoadContent()
@@ -61,7 +62,7 @@ namespace Project1
 
             Rectangle rect = new Rectangle(-tooWide / 2, 0, imgWid, height);
             
-            spriteBatch.DrawString(font1, "Game paused.\nHit enter to resume!\nOr ctrl+q to exit!", new Vector2(width/4, height/4), Color.Red);
+            spriteBatch.DrawString(font1, "GAME OVER!/n/n/n Your Score: " + mainGameScreen.score, new Vector2(width/4, height/4), Color.Red);
         }
     }
 }

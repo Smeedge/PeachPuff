@@ -16,7 +16,7 @@ namespace Project1
         /// <summary>
         /// The eye position in space
         /// </summary>
-        private Vector3 eye = new Vector3(100, 100, 100);
+        private Vector3 eye = new Vector3(0, 30, 0);
 
         /// <summary>
         /// The location we are looking at in space.
@@ -30,14 +30,13 @@ namespace Project1
 
         private float fov = MathHelper.ToRadians(35);
         private float znear = 10;
-        private float zfar = 10000;
+        private float zfar = 1000;
 
         private Matrix view;
         private Matrix projection;
 
         private bool mousePitchYaw = true;
         private bool mousePanTilt = true;
-        private bool padPitchYaw = true;
 
         private MouseState lastMouseState;
 
@@ -112,136 +111,23 @@ namespace Project1
         /// </summary>
         public void Reset()
         {
-            eye = new Vector3(30, 30, 30);
+            eye = new Vector3(0, 30, 0);
             center = new Vector3(0, 0, 0);
             up = new Vector3(0, 1, 0);
             fov = MathHelper.ToRadians(35);
             znear = 10;
-            zfar = 1000;
+            zfar = 2000;
             mousePitchYaw = true;
             mousePanTilt = true;
-            padPitchYaw = true;
             //useChaseCamera = false;
             desiredEye = Vector3.Zero;
             velocity = Vector3.Zero;
             stiffness = 100;
-            damping = 60;
-        }
-
-        public void Pitch(float angle)
-        {
-            // Need a vector in the camera X direction
-            Vector3 cameraZ = eye - center;
-            Vector3 cameraX = Vector3.Cross(up, cameraZ);
-            float len = cameraX.LengthSquared();
-            if (len > 0)
-                cameraX.Normalize();
-            else
-                cameraX = new Vector3(1, 0, 0);
-
-            Matrix t1 = Matrix.CreateTranslation(-center);
-            Matrix r = Matrix.CreateFromAxisAngle(cameraX, angle);
-            Matrix t2 = Matrix.CreateTranslation(center);
-
-            Matrix M = t1 * r * t2;
-            eye = Vector3.Transform(eye, M);
-            ComputeView();
-        }
-
-        public void Yaw(float angle)
-        {
-            // Need a vectorin the camera Y direction
-            Vector3 cameraZ = eye - center;
-            Vector3 cameraX = Vector3.Cross(up, cameraZ);
-            Vector3 cameraY = Vector3.Cross(cameraZ, cameraX);
-            float len = cameraY.LengthSquared();
-            if (len > 0)
-                cameraY.Normalize();
-            else
-                cameraY = new Vector3(0, 1, 0);
-
-            Matrix t1 = Matrix.CreateTranslation(-center);
-            Matrix r = Matrix.CreateFromAxisAngle(cameraY, angle);
-            Matrix t2 = Matrix.CreateTranslation(center);
-
-            Matrix M = t1 * r * t2;
-            eye = Vector3.Transform(eye, M);
-            ComputeView();
-
-        }
-
-       
-        public void Pan(float angle)
-        {
-            Vector3 cameraZ = eye - center;
-            Vector3 cameraX = Vector3.Cross(up, cameraZ);
-            Vector3 cameraY = Vector3.Cross(cameraZ, cameraX);
-            float len = cameraX.LengthSquared();
-            if (len > 0)
-                cameraY.Normalize();
-            else
-                cameraY = new Vector3(0, 1, 0);
-
-            Matrix t1 = Matrix.CreateTranslation(-eye);
-            Matrix r = Matrix.CreateFromAxisAngle(cameraY, angle);
-            Matrix t2 = Matrix.CreateTranslation(eye);
-
-            Matrix M = t1 * r * t2;
-            center = Vector3.Transform(center, M);
-
-        }
-
-        public void Tilt(float angle)
-        {
-            Vector3 cameraZ = eye - center;
-            Vector3 cameraX = Vector3.Cross(up, cameraZ);
-            float len = cameraX.LengthSquared();
-            if (len > 0)
-                cameraX.Normalize();
-            else
-                cameraX = new Vector3(1, 0, 0);
-
-            Matrix t1 = Matrix.CreateTranslation(-eye);
-            Matrix r = Matrix.CreateFromAxisAngle(cameraX, angle);
-            Matrix t2 = Matrix.CreateTranslation(eye);
-
-            Matrix M = t1 * r * t2;
-            center = Vector3.Transform(center, M);
-
+            damping = 600;
         }
 
         public void Update(GameTime gameTime)
         {
-            MouseState mouseState = Mouse.GetState();
-
-            if (mousePitchYaw && mouseState.LeftButton == ButtonState.Pressed &&
-                lastMouseState.LeftButton == ButtonState.Pressed)
-            {
-                float changeY = mouseState.Y - lastMouseState.Y;
-                Pitch(-changeY * 0.005f);
-
-                float changeX = mouseState.X - lastMouseState.X;
-                Yaw(-changeX * 0.005f);
-            }
-
-            if (mousePanTilt && mouseState.RightButton == ButtonState.Pressed &&
-                lastMouseState.RightButton == ButtonState.Pressed)
-            {
-                float changeY = mouseState.Y - lastMouseState.Y;
-                Tilt(changeY * 0.005f);
-
-                float changeX = mouseState.X - lastMouseState.X;
-                Pan(changeX * 0.005f);
-            }
-
-            GamePadState gamePadState = GamePad.GetState(PlayerIndex.One);
-            if (padPitchYaw)
-            {
-                Yaw(-gamePadState.ThumbSticks.Right.X * 0.05f);
-                Pitch(gamePadState.ThumbSticks.Right.Y * 0.05f);
-            }
-
-            lastMouseState = mouseState;
 
             if (useChaseCamera)
             {

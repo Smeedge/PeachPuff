@@ -43,7 +43,7 @@ namespace Project1
         /// <summary>
         /// Current position
         /// </summary>
-        private Vector3 position = Vector3.Zero;
+        private Vector3 position = new Vector3(0, 0, 20);
 
         /// <summary>
         /// How fast we are going (cm/sec)
@@ -58,7 +58,7 @@ namespace Project1
         /// <summary>
         ///  Decelleration due to drag
         /// </summary>
-        private const float Drag = 1;
+        private const float Drag = 1.5f;
 
         /// <summary>
         /// Maximum thrust (cm/sec^2)
@@ -74,7 +74,7 @@ namespace Project1
         /// <summary>
         /// The maximum turning rate
         /// </summary>
-        private const float MaxTurnRate = (float)Math.PI/2;
+        private const float MaxTurnRate = (float)Math.PI;
 
         /// <summary>
         /// elevation rate
@@ -115,6 +115,8 @@ namespace Project1
         /// </summary>
         public float PitchRate { get { return pitchRate; } set { pitchRate = value; } }
 
+        public Model Model { get { return batModel; } }
+
 
         /// <summary>
         /// The current bat transformation
@@ -139,13 +141,13 @@ namespace Project1
         /// LoadContent will be called once per game and is the place to load
         /// all of your content.
         /// </summary>
-         public void LoadContent(ContentManager content)
+        public void LoadContent(ContentManager content)
         {
-             batModel = content.Load<Model>("Bat-rigid");
-             leftwingBase = batModel.Bones["LeftWing1"];
-             rightwingBase = batModel.Bones["RightWing1"];
-             leftBaseBind = leftwingBase.Transform;
-             rightBaseBind = rightwingBase.Transform;
+            batModel = content.Load<Model>("Bat-rigid");
+            leftwingBase = batModel.Bones["LeftWing1"];
+            rightwingBase = batModel.Bones["RightWing1"];
+            leftBaseBind = leftwingBase.Transform;
+            rightBaseBind = rightwingBase.Transform;
         }
 
 
@@ -180,8 +182,8 @@ namespace Project1
             // Orientation updates
             //
 
-            orientation *= Quaternion.CreateFromAxisAngle(new Vector3(0, 0, 1), -turnRate * MaxTurnRate * (float)delta);
-            orientation *= Quaternion.CreateFromAxisAngle(new Vector3(1, 0, 0), pitchRate * MaxPitchRate * (float)delta);
+            orientation *= Quaternion.CreateFromAxisAngle(new Vector3(0, 1, 0), -turnRate * MaxTurnRate * (float)delta);
+            //orientation *= Quaternion.CreateFromAxisAngle(new Vector3(1, 0, 0), pitchRate * MaxPitchRate * (float)delta);
             orientation.Normalize();
 
 
@@ -203,22 +205,22 @@ namespace Project1
         }
 
 
-       private void DrawModel(GraphicsDeviceManager graphics, Model model, Matrix world)
-       {
-           Matrix[] transforms = new Matrix[model.Bones.Count];
-           model.CopyAbsoluteBoneTransformsTo(transforms);
+        private void DrawModel(GraphicsDeviceManager graphics, Model model, Matrix world)
+        {
+            Matrix[] transforms = new Matrix[model.Bones.Count];
+            model.CopyAbsoluteBoneTransformsTo(transforms);
 
-           foreach (ModelMesh mesh in model.Meshes)
-           {
-               foreach (BasicEffect effect in mesh.Effects)
-               {
-                   effect.EnableDefaultLighting();
-                   effect.World = transforms[mesh.ParentBone.Index] * world;
-                   effect.View = game.Camera.View;
-                   effect.Projection = game.Camera.Projection;
-               }
-               mesh.Draw();
-           }
-       }
+            foreach (ModelMesh mesh in model.Meshes)
+            {
+                foreach (BasicEffect effect in mesh.Effects)
+                {
+                    effect.EnableDefaultLighting();
+                    effect.World = transforms[mesh.ParentBone.Index] * world;
+                    effect.View = game.Camera.View;
+                    effect.Projection = game.Camera.Projection;
+                }
+                mesh.Draw();
+            }
+        }
     }
 }

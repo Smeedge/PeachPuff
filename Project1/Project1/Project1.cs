@@ -29,6 +29,23 @@ namespace Project1
         GameScreen screen = null;
 
 
+
+        /// <summary>
+        /// A reference to the audio engine we use
+        /// </summary>
+        public AudioEngine audioEngine;
+
+        /// <summary>
+        /// The loaded audio wave bank
+        /// </summary>
+        public WaveBank waveBank;
+
+        /// <summary>
+        /// The loaded audio sound bank
+        /// </summary>
+        public SoundBank soundBank;
+
+
         private Camera camera;
         public Camera Camera { get { return camera; } }
 
@@ -64,7 +81,7 @@ namespace Project1
             Content.RootDirectory = "Content";
             project1Screen = new Project1GameScreen(this);
             splashScreen = new SplashGameScreen(this);
-            endScreen = new EndGameScreen(this);
+            endScreen = new EndGameScreen(this, project1Screen);
             screen = splashScreen;
             camera = new Camera(graphics);
             camera.UseChaseCamera = true;
