@@ -33,6 +33,7 @@ namespace Project1
             public Model butterflyModel;
             public Vector3 position;
             public Vector3 velocity;
+            public Vector3 direction;
             public float size;
             public float angle = -.5f;
             public float rate = 3f;
@@ -50,20 +51,20 @@ namespace Project1
             {
                 Butterfly butter_fly = new Butterfly();
                 butter_fly.butterflyModel = butterfly;
+                butter_fly.direction = butter_fly.position;
                 butter_fly.position = RandomVector(-80, 80);
-                butter_fly.velocity = RandomVector(-40, 40);
-                butter_fly.size = 10;
-
+                butter_fly.velocity = RandomVector(-80, 80);
                 if (butter_fly.position.Length() < 100)
                     continue;
                 butterflys.AddLast(butter_fly);
             }
         }
 
-        public Vector3 RandomVector(float min, float max)
+        private Vector3 RandomVector(float min, float max)
         {
             return new Vector3((float)(min + (random.NextDouble() * (max - min))),
-                (float)(min + (random.NextDouble() * (max - min))), 0);
+                0,
+                (float)(min + (random.NextDouble() * (max - min))));
         }
 
         /// <summary>
@@ -95,7 +96,8 @@ namespace Project1
             {
                 butter_fly.position += butter_fly.velocity * delta;
 
-                // this code animates the butterfly
+
+                // this code animates the butterfly on its own
                 if (butter_fly.angle >= -.5f && butter_fly.angleChange == false)
                     butter_fly.angle += (float)(Math.PI * butter_fly.rate * delta);
                 else
@@ -125,7 +127,7 @@ namespace Project1
         {
             foreach (Butterfly butter_fly in butterflys)
             {
-                DrawModel(graphics, butterfly, Matrix.CreateScale(10) * Matrix.CreateTranslation(butter_fly.position));
+                DrawModel(graphics, butterfly, Matrix.CreateScale(2) * Matrix.CreateTranslation(butter_fly.position));
             }
         }
 
@@ -162,7 +164,7 @@ namespace Project1
                     newButterfly.size = butter_fly.size;
                     newButterfly.butterflyModel = butter_fly.butterflyModel;
                     newButterfly.velocity = RandomVector(-40, 40);
-                    newButterfly.position = RandomVector(-80, 80);
+                    newButterfly.position = RandomVector(-1000, 1000);
 
                     // Delete the original butterfly
                     butterflys.Remove(butterflyNode);
@@ -173,8 +175,6 @@ namespace Project1
             }
 
         }
-
-     
 
         public bool TestSphereForCollision(BoundingSphere sphere)
         {

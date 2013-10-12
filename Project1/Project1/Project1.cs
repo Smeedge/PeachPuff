@@ -22,16 +22,34 @@ namespace Project1
         private KeyboardState lastKeyboardState;
 
         // our game screens
-        public Project1GameScreen project1Screen = null;
+        Project1GameScreen project1Screen = null;
         SplashGameScreen splashScreen = null;
+        EndGameScreen endScreen = null;
         // The game screen we are playing
         GameScreen screen = null;
+
+
+
+        /// <summary>
+        /// A reference to the audio engine we use
+        /// </summary>
+        public AudioEngine audioEngine;
+
+        /// <summary>
+        /// The loaded audio wave bank
+        /// </summary>
+        public WaveBank waveBank;
+
+        /// <summary>
+        /// The loaded audio sound bank
+        /// </summary>
+        public SoundBank soundBank;
 
 
         private Camera camera;
         public Camera Camera { get { return camera; } }
 
-        public enum GameScreens { Splash, Project1 };
+        public enum GameScreens { Splash, Project1, End };
 
         public GraphicsDeviceManager Graphics { get { return graphics; } }
 
@@ -48,6 +66,10 @@ namespace Project1
                 case GameScreens.Project1:
                     screen = project1Screen;
                     break;
+
+                case GameScreens.End:
+                    screen = endScreen;
+                    break;
             }
 
             screen.Activate();
@@ -59,6 +81,7 @@ namespace Project1
             Content.RootDirectory = "Content";
             project1Screen = new Project1GameScreen(this);
             splashScreen = new SplashGameScreen(this);
+            endScreen = new EndGameScreen(this, project1Screen);
             screen = splashScreen;
             camera = new Camera(graphics);
             camera.UseChaseCamera = true;
@@ -89,6 +112,7 @@ namespace Project1
             spriteBatch = new SpriteBatch(GraphicsDevice);
             project1Screen.LoadContent();
             splashScreen.LoadContent();
+            endScreen.LoadContent();
             screen.Activate();
         }
 

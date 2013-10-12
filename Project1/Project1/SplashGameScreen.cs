@@ -45,7 +45,7 @@ namespace Project1
 
         public override void Draw(GameTime gameTime)
         {
-            Game.GraphicsDevice.Clear(Color.Crimson);
+            Game.GraphicsDevice.Clear(Color.Black);
         }
 
         public override void DrawSprites(GameTime gameTime, SpriteBatch spriteBatch)
@@ -59,7 +59,7 @@ namespace Project1
             Rectangle rect = new Rectangle(-tooWide / 2, 0, imgWid, height);
             
             spriteBatch.Draw(bati, rect, Color.Cyan);
-            spriteBatch.DrawString(font1, " Press enter      to begin", new Vector2(66, 270), Color.Cyan);
+            spriteBatch.DrawString(font1, " Press enter                             to begin", new Vector2(65, 270), Color.Cyan);
         }
     }
 }

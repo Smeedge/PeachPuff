@@ -1,12 +1,20 @@
 Content\Bat-rigid.xnb
-Content\Sky.xnb
 Content\Butterfly.xnb
+Content\Bee.xnb
+Content\GrassField2.xnb
+Content\Coin.xnb
+Content\font1.xnb
+Content\batImg.xnb
 Content\FBX\FCCE1F92\Bat-rigid.fbm\BAT_2_0.xnb
-Content\FBX\45E31D76\Sky.fbm\sky_0.xnb
 Content\FBX\DA2000\Butterfly.fbm\BUTTFACE_0.xnb
 Content\FBX\DA2000\Butterfly.fbm\BUTTWIFR_0.xnb
 Content\FBX\DA2000\Butterfly.fbm\BUTTWIBA_0.xnb
 Content\FBX\DA2000\Butterfly.fbm\BUTTBODY_0.xnb
+Content\FBX\44E41D4B\Bee.fbm\gb3_0.xnb
+Content\FBX\44E41D4B\Bee.fbm\gb1_0.xnb
+Content\FBX\44E41D4B\Bee.fbm\gb2_0.xnb
+Content\FBX\44E41D4B\Bee.fbm\gb4_0.xnb
+Content\FBX\40182075\GrassField2.fbm\grass2_0.xnb
 Content\Project1Audio.xgs
 Content\Wave Bank.xwb
 Content\Sound Bank.xsb

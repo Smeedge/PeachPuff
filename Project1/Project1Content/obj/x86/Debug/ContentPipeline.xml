@@ -8,26 +8,12 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\Bat-rigid.xnb</Output>
-      <Time>2013-10-05T15:59:35.8304425-04:00</Time>
+      <Time>2013-10-09T18:29:22-04:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Bat-rigid_0.xml</Key>
-        <Value>2013-10-09T16:34:31.4137545-04:00</Value>
+        <Value>2013-10-11T20:34:55.2496888-04:00</Value>
       </Dependency>
       <Request>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\FBX\FCCE1F92\Bat-rigid.fbm\BAT_2_0.xnb</Request>
-    </Item>
-    <Item>
-      <Source>Sky.FBX</Source>
-      <Name>Sky</Name>
-      <Importer>FbxImporter</Importer>
-      <Processor>ModelProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\Sky.xnb</Output>
-      <Time>2013-10-05T15:59:35.8904459-04:00</Time>
-      <Dependency>
-        <Key>obj\x86\Debug\Sky_0.xml</Key>
-        <Value>2013-10-09T16:34:32.9278411-04:00</Value>
-      </Dependency>
-      <Request>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\FBX\45E31D76\Sky.fbm\sky_0.xnb</Request>
     </Item>
     <Item>
       <Source>Butterfly.FBX</Source>
@@ -36,10 +22,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\Butterfly.xnb</Output>
-      <Time>2013-10-09T16:31:03.1848445-04:00</Time>
+      <Time>2013-10-09T18:29:22-04:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Butterfly_0.xml</Key>
-        <Value>2013-10-09T16:34:34.5459336-04:00</Value>
+        <Value>2013-10-11T20:34:57.3798107-04:00</Value>
       </Dependency>
       <Request>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\FBX\DA2000\Butterfly.fbm\BUTTFACE_0.xnb</Request>
       <Request>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\FBX\DA2000\Butterfly.fbm\BUTTWIFR_0.xnb</Request>
@@ -47,11 +33,73 @@
       <Request>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\FBX\DA2000\Butterfly.fbm\BUTTBODY_0.xnb</Request>
     </Item>
     <Item>
+      <Source>Bee.FBX</Source>
+      <Name>Bee</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\Bee.xnb</Output>
+      <Time>2013-10-09T18:29:22-04:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Bee_0.xml</Key>
+        <Value>2013-10-11T20:35:04.4672161-04:00</Value>
+      </Dependency>
+      <Request>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\FBX\44E41D4B\Bee.fbm\gb3_0.xnb</Request>
+      <Request>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\FBX\44E41D4B\Bee.fbm\gb1_0.xnb</Request>
+      <Request>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\FBX\44E41D4B\Bee.fbm\gb2_0.xnb</Request>
+      <Request>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\FBX\44E41D4B\Bee.fbm\gb4_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>GrassField2.FBX</Source>
+      <Name>GrassField2</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\GrassField2.xnb</Output>
+      <Time>2013-10-09T18:29:22-04:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\GrassField2_0.xml</Key>
+        <Value>2013-10-11T20:35:05.3262652-04:00</Value>
+      </Dependency>
+      <Request>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\FBX\40182075\GrassField2.fbm\grass2_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>Coin.fbx</Source>
+      <Name>Coin</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\Coin.xnb</Output>
+      <Time>2013-10-11T17:15:10-04:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Coin_0.xml</Key>
+        <Value>2013-10-11T20:35:06.5903375-04:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>font1.spritefont</Source>
+      <Name>font1</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\font1.xnb</Output>
+      <Time>2013-10-09T18:29:22-04:00</Time>
+    </Item>
+    <Item>
+      <Source>batImg.jpg</Source>
+      <Name>batImg</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\batImg.xnb</Output>
+      <Time>2013-10-09T18:29:22-04:00</Time>
+    </Item>
+    <Item>
       <Source>Bat-rigid.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Bat-rigid_0.xml</Output>
-      <Time>2013-10-05T15:59:35.8304425-04:00</Time>
+      <Time>2013-10-09T18:29:22-04:00</Time>
     </Item>
     <Item>
       <Source>obj\x86\Debug\FBX\FCCE1F92\Bat-rigid.fbm\BAT_2.JPG</Source>
@@ -67,37 +115,14 @@
       </Parameters>
       <Options>None</Options>
       <Output>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\FBX\FCCE1F92\Bat-rigid.fbm\BAT_2_0.xnb</Output>
-      <Time>2013-10-09T16:34:30.6387102-04:00</Time>
-    </Item>
-    <Item>
-      <Source>Sky.FBX</Source>
-      <Importer>FbxImporter</Importer>
-      <Options>IntermediateFile, DontCacheImportedData</Options>
-      <Output>obj\x86\Debug\Sky_0.xml</Output>
-      <Time>2013-10-05T15:59:35.8904459-04:00</Time>
-    </Item>
-    <Item>
-      <Source>obj\x86\Debug\FBX\45E31D76\Sky.fbm\sky.jpg</Source>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Parameters>
-        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
-        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
-        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
-        <Data Key="GenerateMipmaps" Type="bool">true</Data>
-        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
-        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
-      </Parameters>
-      <Options>None</Options>
-      <Output>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\FBX\45E31D76\Sky.fbm\sky_0.xnb</Output>
-      <Time>2013-10-09T16:34:32.8578371-04:00</Time>
+      <Time>2013-10-11T20:34:54.7826621-04:00</Time>
     </Item>
     <Item>
       <Source>Butterfly.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Butterfly_0.xml</Output>
-      <Time>2013-10-09T16:31:03.1848445-04:00</Time>
+      <Time>2013-10-09T18:29:22-04:00</Time>
     </Item>
     <Item>
       <Source>obj\x86\Debug\FBX\DA2000\Butterfly.fbm\BUTTFACE.jpg</Source>
@@ -113,7 +138,7 @@
       </Parameters>
       <Options>None</Options>
       <Output>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\FBX\DA2000\Butterfly.fbm\BUTTFACE_0.xnb</Output>
-      <Time>2013-10-09T16:34:33.7928906-04:00</Time>
+      <Time>2013-10-11T20:34:56.8517805-04:00</Time>
     </Item>
     <Item>
       <Source>obj\x86\Debug\FBX\DA2000\Butterfly.fbm\BUTTWIFR.jpg</Source>
@@ -129,7 +154,7 @@
       </Parameters>
       <Options>None</Options>
       <Output>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\FBX\DA2000\Butterfly.fbm\BUTTWIFR_0.xnb</Output>
-      <Time>2013-10-09T16:34:33.7958907-04:00</Time>
+      <Time>2013-10-11T20:34:56.8537806-04:00</Time>
     </Item>
     <Item>
       <Source>obj\x86\Debug\FBX\DA2000\Butterfly.fbm\BUTTWIBA.jpg</Source>
@@ -145,7 +170,7 @@
       </Parameters>
       <Options>None</Options>
       <Output>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\FBX\DA2000\Butterfly.fbm\BUTTWIBA_0.xnb</Output>
-      <Time>2013-10-09T16:34:33.800891-04:00</Time>
+      <Time>2013-10-11T20:34:56.8577808-04:00</Time>
     </Item>
     <Item>
       <Source>obj\x86\Debug\FBX\DA2000\Butterfly.fbm\BUTTBODY.jpg</Source>
@@ -161,7 +186,108 @@
       </Parameters>
       <Options>None</Options>
       <Output>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\FBX\DA2000\Butterfly.fbm\BUTTBODY_0.xnb</Output>
-      <Time>2013-10-09T16:34:33.8058913-04:00</Time>
+      <Time>2013-10-11T20:34:56.860781-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Bee.FBX</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Bee_0.xml</Output>
+      <Time>2013-10-09T18:29:22-04:00</Time>
+    </Item>
+    <Item>
+      <Source>obj\x86\Debug\FBX\44E41D4B\Bee.fbm\gb3.jpg</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\FBX\44E41D4B\Bee.fbm\gb3_0.xnb</Output>
+      <Time>2013-10-11T20:34:58.2338595-04:00</Time>
+    </Item>
+    <Item>
+      <Source>obj\x86\Debug\FBX\44E41D4B\Bee.fbm\gb1.jpg</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\FBX\44E41D4B\Bee.fbm\gb1_0.xnb</Output>
+      <Time>2013-10-11T20:34:58.2358596-04:00</Time>
+    </Item>
+    <Item>
+      <Source>obj\x86\Debug\FBX\44E41D4B\Bee.fbm\gb2.jpg</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\FBX\44E41D4B\Bee.fbm\gb2_0.xnb</Output>
+      <Time>2013-10-11T20:34:58.2388598-04:00</Time>
+    </Item>
+    <Item>
+      <Source>obj\x86\Debug\FBX\44E41D4B\Bee.fbm\gb4.jpg</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\FBX\44E41D4B\Bee.fbm\gb4_0.xnb</Output>
+      <Time>2013-10-11T20:34:58.24186-04:00</Time>
+    </Item>
+    <Item>
+      <Source>GrassField2.FBX</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\GrassField2_0.xml</Output>
+      <Time>2013-10-09T18:29:22-04:00</Time>
+    </Item>
+    <Item>
+      <Source>obj\x86\Debug\FBX\40182075\GrassField2.fbm\grass2.jpg</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1\bin\x86\Debug\Content\FBX\40182075\GrassField2.fbm\grass2_0.xnb</Output>
+      <Time>2013-10-11T20:35:05.2992636-04:00</Time>
+    </Item>
+    <Item>
+      <Source>Coin.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Coin_0.xml</Output>
+      <Time>2013-10-11T17:15:10-04:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

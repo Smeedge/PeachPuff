@@ -14,28 +14,28 @@ namespace Project1
     public class Project1GameScreen : GameScreen
     {
         private Bat bat;
+        private Bee bee;
+        private Field field;
         private ButterflyField butterflyField;
+        private CoinField coinField;
         private KeyboardState lastKeyboardState;
+        private SpriteFont scoreFont;
 
-        /// <summary>
-        /// A reference to the audio engine we use
-        /// </summary>
-        public AudioEngine audioEngine;
+        public int score = 0;
+        private int time = 0;
+        private float timeM = 0;
 
-        /// <summary>
-        /// The loaded audio wave bank
-        /// </summary>
-        public WaveBank waveBank;
+        
 
-        /// <summary>
-        /// The loaded audio sound bank
-        /// </summary>
-        public SoundBank soundBank;
 
-        public Project1GameScreen(Project1 game): base(game)
+        public Project1GameScreen(Project1 game)
+            : base(game)
         {
             bat = new Bat(Game);
             butterflyField = new ButterflyField(Game);
+            coinField = new CoinField(Game);
+            bee = new Bee(Game, bat);
+            field = new Field(Game);
         }
 
         public override void Initialize()
@@ -44,14 +44,14 @@ namespace Project1
             lastKeyboardState = Keyboard.GetState();
         }
 
-        public override void LoadContent() 
+        public override void LoadContent()
         {
             bat.LoadContent(Game.Content);
             butterflyField.LoadContent(Game.Content);
-            audioEngine = new AudioEngine("Content\\Project1Audio.xgs");
-            waveBank = new WaveBank(audioEngine, "Content\\Wave Bank.xwb");
-            soundBank = new SoundBank(audioEngine, "Content\\Sound Bank.xsb");
-            //scoreFont = Content.Load<SpriteFont>("scorefont");
+            coinField.LoadContent(Game.Content);
+            bee.LoadContent(Game.Content);
+            field.LoadContent(Game.Content);
+            scoreFont = Game.Content.Load<SpriteFont>("font1");
         }
         public override void Activate()
         {
@@ -62,14 +62,14 @@ namespace Project1
         public override void Deactivate()
         {
         }
-        public override void Update(GameTime gameTime) 
+        public override void Update(GameTime gameTime)
         {
             KeyboardState keyBoardState = Keyboard.GetState();
 
             // moves the bat
             if (keyBoardState.IsKeyDown(Keys.Space))
             {
-                bat.Thrust = 1;
+                bat.Thrust = 10;
             }
             else
             {
@@ -90,15 +90,20 @@ namespace Project1
                 bat.TurnRate = 0;
             }
 
-            // elevate the bat
-            if (keyBoardState.IsKeyDown(Keys.Up))
-            {
-                bat.PitchRate = 1;
-            }
-            else if (keyBoardState.IsKeyDown(Keys.Down))
-            {
-                bat.PitchRate = -1;
-            }
+            time = gameTime.TotalGameTime.Seconds;
+            timeM = gameTime.TotalGameTime.Milliseconds / 100;
+
+
+            lastKeyboardState = keyBoardState;
+            bat.Update(gameTime);
+            butterflyField.Update(gameTime);
+            coinField.Update(gameTime);
+            bee.Update(gameTime);
+            field.Update(gameTime);
+            Game.Camera.DesiredEye = new Vector3(bat.Position.X, 250, bat.Position.Z);
+            Game.Camera.Center = bat.Position;
+            Game.Camera.Up = bat.Transform.Backward;
+            Game.Camera.Update(gameTime);
 
 
             Matrix[] transforms = new Matrix[bat.Model.Bones.Count];
@@ -110,29 +115,30 @@ namespace Project1
                 BoundingSphere bs = mesh.BoundingSphere;
                 bs = bs.Transform(transforms[mesh.ParentBone.Index] * batTransform);
                 bool collided = butterflyField.TestSphereForCollision(bs);
-                
+                bool CoinCollide = coinField.TestSphereForCollision(bs);
+            
+                if (bee.TestSphereForCollision(bs))
+                    Game.SetScreen(Project1.GameScreens.End); //DETECT WHETHER BEE COLLIDED WITH BAT, IF SO, DISPLAY ENDGAME SCREEN
+               
             }
 
 
-            lastKeyboardState = keyBoardState;
-            bat.Update(gameTime);
-            butterflyField.Update(gameTime);
-            Game.Camera.DesiredEye = Vector3.Transform(new Vector3(0, 30, -30), bat.Transform);
-            Game.Camera.Center = bat.Position;
-            Game.Camera.Up = bat.Transform.Up;
-            Game.Camera.Update(gameTime);
             base.Update(gameTime);
         }
-        public override void Draw(GameTime gameTime) 
+        public override void Draw(GameTime gameTime)
         {
-            Game.GraphicsDevice.Clear(Color.White);
+            Game.GraphicsDevice.Clear(Color.ForestGreen);
+            field.Draw(Game.Graphics, gameTime);
             bat.Draw(Game.Graphics, gameTime);
             butterflyField.Draw(Game.Graphics, gameTime);
+            coinField.Draw(Game.Graphics, gameTime);
+            bee.Draw(Game.Graphics, gameTime);
+            
         }
         public override void DrawSprites(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            
-           // spriteBatch.DrawString(scoreFont, "hi", new Vector2(10, 10), Color.White);
+            spriteBatch.DrawString(scoreFont, "Score: " + score.ToString(), new Vector2(10, 10), Color.Red);
+            spriteBatch.DrawString(scoreFont, "Time: " + time.ToString() + "." + timeM.ToString(), new Vector2(10, 40), Color.Yellow);
         }
     }
 }

@@ -1,2 +1,6 @@
 H:\CSE 473\Project1\Project1\Project1\Project1Content\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\myersco3\Desktop\PeachPuff-James-Current\Project1\Project1Content\obj\x86\Debug\ResolveAssemblyReference.cache
+H:\CSE 473\PROJECT1-C\Project1\Project1Content\obj\x86\Debug\ResolveAssemblyReference.cache
+H:\CSE 473\PROJECT1-C\Project1\Project1Content\obj\x86\Debug\Project1Audio.xml
+C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1Content\obj\x86\Debug\Project1Content.contentprojResolveAssemblyReference.cache
 C:\Users\Omar\Documents\GitHub\PeachPuff\Project1\Project1Content\obj\x86\Debug\Project1Audio.xml
